@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Onderhoud_calibratieModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Onderhoud_calibratie.dbo.Bovenloopkraan' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Bovenloopkraan">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="datum_gekeurd" Type="date" />
+    <Property Name="datum_herkeuring" Type="date" />
+    <Property Name="code_nr" Type="varchar" MaxLength="50" />
+    <Property Name="locatie" Type="varchar" MaxLength="50" />
+    <Property Name="bouwjaar" Type="int" />
+    <Property Name="leverancier" Type="varchar" MaxLength="50" />
+    <Property Name="stamkaart" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Hijsmiddel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="datum_gekeurd" Type="date" />
+    <Property Name="datum_herkeuring" Type="date" />
+    <Property Name="reg_nr" Type="int" />
+    <Property Name="certi_nr" Type="int" />
+    <Property Name="soort" Type="varchar" MaxLength="50" />
+    <Property Name="status" Type="varchar" MaxLength="50" />
+    <Property Name="certificaat" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Onderhoud_calibratie.dbo.Lasapparaat' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Lasapparaat">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="benaming" Type="varchar" MaxLength="50" />
+    <Property Name="merk" Type="varchar" MaxLength="50" />
+    <Property Name="locatie" Type="varchar" MaxLength="50" />
+    <Property Name="leverancier" Type="varchar" MaxLength="50" />
+    <Property Name="LAM_nr" Type="int" />
+    <Property Name="code_nr" Type="int" />
+    <Property Name="datum_gekeurd" Type="date" />
+    <Property Name="datum_herkeuring" Type="date" />
+    <Property Name="bouwjaar" Type="date" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Onderhoud_calibratie.dbo.Oplegger' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Oplegger">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="datum_gekeurd" Type="date" />
+    <Property Name="datum_herkeuring" Type="date" />
+    <Property Name="code_nr" Type="varchar" MaxLength="50" />
+    <Property Name="kenteken" Type="varchar" MaxLength="50" />
+    <Property Name="locatie" Type="varchar" MaxLength="50" />
+    <Property Name="bouwjaar" Type="int" />
+    <Property Name="leverancier" Type="varchar" MaxLength="50" />
+    <Property Name="stamkaart" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Onderhoud_calibratie.dbo.Valbeveiliging' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Valbeveiliging">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="omschrijving" Type="varchar" MaxLength="50" />
+    <Property Name="opdr_nr" Type="int" />
+    <Property Name="certi_nr" Type="int" />
+    <Property Name="serie_nr" Type="int" />
+    <Property Name="datum_gekeurd" Type="date" />
+    <Property Name="datum_herkeuring" Type="date" />
+    <Property Name="persoon" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="Onderhoud_calibratieModelStoreContainer">
+    <EntitySet Name="Hijsmiddel" EntityType="Self.Hijsmiddel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bovenloopkraan" EntityType="Self.Bovenloopkraan" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Bovenloopkraan].[Id] AS [Id], 
+    [Bovenloopkraan].[datum_gekeurd] AS [datum_gekeurd], 
+    [Bovenloopkraan].[datum_herkeuring] AS [datum_herkeuring], 
+    [Bovenloopkraan].[code_nr] AS [code_nr], 
+    [Bovenloopkraan].[locatie] AS [locatie], 
+    [Bovenloopkraan].[bouwjaar] AS [bouwjaar], 
+    [Bovenloopkraan].[leverancier] AS [leverancier], 
+    [Bovenloopkraan].[stamkaart] AS [stamkaart]
+    FROM [dbo].[Bovenloopkraan] AS [Bovenloopkraan]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Lasapparaat" EntityType="Self.Lasapparaat" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Lasapparaat].[Id] AS [Id], 
+    [Lasapparaat].[benaming] AS [benaming], 
+    [Lasapparaat].[merk] AS [merk], 
+    [Lasapparaat].[locatie] AS [locatie], 
+    [Lasapparaat].[leverancier] AS [leverancier], 
+    [Lasapparaat].[LAM_nr] AS [LAM_nr], 
+    [Lasapparaat].[code_nr] AS [code_nr], 
+    [Lasapparaat].[datum_gekeurd] AS [datum_gekeurd], 
+    [Lasapparaat].[datum_herkeuring] AS [datum_herkeuring], 
+    [Lasapparaat].[bouwjaar] AS [bouwjaar]
+    FROM [dbo].[Lasapparaat] AS [Lasapparaat]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Oplegger" EntityType="Self.Oplegger" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Oplegger].[Id] AS [Id], 
+    [Oplegger].[datum_gekeurd] AS [datum_gekeurd], 
+    [Oplegger].[datum_herkeuring] AS [datum_herkeuring], 
+    [Oplegger].[code_nr] AS [code_nr], 
+    [Oplegger].[kenteken] AS [kenteken], 
+    [Oplegger].[locatie] AS [locatie], 
+    [Oplegger].[bouwjaar] AS [bouwjaar], 
+    [Oplegger].[leverancier] AS [leverancier], 
+    [Oplegger].[stamkaart] AS [stamkaart]
+    FROM [dbo].[Oplegger] AS [Oplegger]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Valbeveiliging" EntityType="Self.Valbeveiliging" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Valbeveiliging].[Id] AS [Id], 
+    [Valbeveiliging].[omschrijving] AS [omschrijving], 
+    [Valbeveiliging].[opdr_nr] AS [opdr_nr], 
+    [Valbeveiliging].[certi_nr] AS [certi_nr], 
+    [Valbeveiliging].[serie_nr] AS [serie_nr], 
+    [Valbeveiliging].[datum_gekeurd] AS [datum_gekeurd], 
+    [Valbeveiliging].[datum_herkeuring] AS [datum_herkeuring], 
+    [Valbeveiliging].[persoon] AS [persoon]
+    FROM [dbo].[Valbeveiliging] AS [Valbeveiliging]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

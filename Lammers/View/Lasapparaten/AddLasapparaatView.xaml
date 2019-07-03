@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="Lammers.View.Lasapparaten.AddLasapparaatView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lammers.View.Lasapparaten"
+        mc:Ignorable="d"
+        DataContext="{Binding AddLasapparaat, Source={StaticResource Locator}}" Height="557" Width="337.429">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="label" Content="Voeg een lasapparaat toe" FontFamily="Arial" FontSize="20" HorizontalAlignment="Left" Margin="60,1,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Locatie" HorizontalAlignment="Left" Margin="45,47,0,0" VerticalAlignment="Top" Height="31" Width="73"/>
+        <ComboBox x:Name="comboBox" SelectedIndex="0"
+        SelectedItem="{Binding Path=SelectedLocatie}" ItemsSource="{Binding Locaties}" HorizontalAlignment="Left" Margin="179,51,0,0" VerticalAlignment="Top" Width="131" Height="26"/>
+        <Label x:Name="label2" Content="Datum gekeurd" HorizontalAlignment="Left" Margin="45,92,0,0" VerticalAlignment="Top" Height="31" Width="95"/>
+        <Label x:Name="label3" Content="Datum herkeuring" HorizontalAlignment="Left" Margin="45,136,0,0" VerticalAlignment="Top" Height="33" Width="108"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="27" Margin="179,185,0,0" TextWrapping="Wrap" Text="{Binding LAM_nummer}" VerticalAlignment="Top" Width="131"/>
+        <Label x:Name="label4" Content="LAM-nummer" HorizontalAlignment="Left" Margin="42,181,0,0" VerticalAlignment="Top" Height="31" Width="115"/>
+        <Label x:Name="label5" Content="Code nummer" HorizontalAlignment="Left" Margin="42,224,0,0" VerticalAlignment="Top" Height="33" Width="111"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="20" Margin="179,229,0,0" TextWrapping="Wrap" Text="{Binding Codenummer}" VerticalAlignment="Top" Width="131"/>
+        <Label x:Name="label6" Content="Bouwjaar" HorizontalAlignment="Left" Margin="42,292,0,0" VerticalAlignment="Top" Height="33" Width="76"/>
+        <DatePicker HorizontalAlignment="Left" SelectedDate="{Binding Keuringdatum}" Margin="179,92,0,0" VerticalAlignment="Top" Width="131" Height="28"/>
+        <DatePicker HorizontalAlignment="Left" SelectedDate="{Binding Herkeuringsdatum}" Margin="179,139,0,0" VerticalAlignment="Top" Width="131" Height="30"/>
+        <Button x:Name="button2" Command="{Binding BackCommand}" HorizontalAlignment="Left" Margin="10,2,0,0" VerticalAlignment="Top" Width="45" Height="24">
+            <Image x:Name="image" Source="/Images/arrow-back-128.png" Height="24" Width="35"/>
+        </Button>
+        <Button x:Name="button1" Content="Maak lasapparaat aan" Command="{Binding AddLasapparaat}" HorizontalAlignment="Left" Margin="190,525,0,0" VerticalAlignment="Top" Width="128"/>
+        <Image x:Name="image1" Source="/Images/lammers_logo.jpg" HorizontalAlignment="Left" Height="36" Margin="42,511,0,0" VerticalAlignment="Top" Width="73"/>
+        <Label x:Name="label6_Copy" Content="Leverancier" HorizontalAlignment="Left" Margin="42,339,0,0" VerticalAlignment="Top" Height="33" Width="76"/>
+        <Label x:Name="label6_Copy1" Content="Merk" HorizontalAlignment="Left" Margin="42,377,0,0" VerticalAlignment="Top" Height="33" Width="76"/>
+        <Label x:Name="label6_Copy2" Content="Benaming" HorizontalAlignment="Left" Margin="42,422,0,0" VerticalAlignment="Top" Height="33" Width="76"/>
+        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Height="27" Margin="179,339,0,0" TextWrapping="Wrap" Text="{Binding Leverancier}" VerticalAlignment="Top" Width="131"/>
+        <TextBox x:Name="textBox_Copy1" HorizontalAlignment="Left" Height="27" Margin="179,377,0,0" TextWrapping="Wrap" Text="{Binding Merk}" VerticalAlignment="Top" Width="131"/>
+        <TextBox x:Name="textBox_Copy2" HorizontalAlignment="Left" Height="27" Margin="179,422,0,0" TextWrapping="Wrap" Text="{Binding Benaming}" VerticalAlignment="Top" Width="131"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" Margin="179,294,0,0" TextWrapping="Wrap" Text="{Binding Bouwjaar}" VerticalAlignment="Top" Width="129"/>
+        <Button Content="{Binding fileText}" Command="{Binding ChooseCertificate}" HorizontalAlignment="Left" Margin="182,482,0,0" VerticalAlignment="Top" Width="128"/>
+        <Label Content="Kies certificaat" HorizontalAlignment="Left" Margin="42,471,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label7" Content="Ligt het bij Stevens?" HorizontalAlignment="Left" Margin="43,259,0,0" VerticalAlignment="Top" />
+        <CheckBox Content="Stevens Lasconstructie" HorizontalAlignment="Left" Margin="179,265,0,0" VerticalAlignment="Top" Width="147" IsChecked="{Binding Stevens}"/>
+    </Grid>
+</UserControl>

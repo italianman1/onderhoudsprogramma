@@ -1,0 +1,484 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Onderhoud_calibratieModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Bovenloopkraan">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="datum_gekeurd" Type="date" />
+          <Property Name="datum_herkeuring" Type="date" />
+          <Property Name="code_nr" Type="varchar" MaxLength="50" />
+          <Property Name="locatie" Type="varchar" MaxLength="50" />
+          <Property Name="bouwjaar" Type="int" />
+          <Property Name="leverancier" Type="varchar" MaxLength="50" />
+          <Property Name="stamkaart" Type="varchar" MaxLength="150" />
+          <Property Name="benaming" Type="varchar" MaxLength="50" />
+          <Property Name="opdracht_nr" Type="varchar" MaxLength="50" />
+          <Property Name="fabrieks_nr" Type="varchar" MaxLength="50" />
+          <Property Name="hijsvermogen" Type="varchar" MaxLength="50" />
+          <Property Name="stevens" Type="bit" />
+        </EntityType>
+        <EntityType Name="Hefmiddel">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="datum_gekeurd" Type="date" />
+          <Property Name="datum_herkeuring" Type="date" />
+          <Property Name="LAM_nr" Type="int" />
+          <Property Name="code_nr" Type="varchar" MaxLength="50" />
+          <Property Name="bouwjaar" Type="int" />
+          <Property Name="leverancier" Type="varchar" MaxLength="50" />
+          <Property Name="merk" Type="varchar" MaxLength="50" />
+          <Property Name="benaming" Type="varchar" MaxLength="50" />
+          <Property Name="stamkaart" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="Hijsmiddel">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="datum_gekeurd" Type="date" />
+          <Property Name="datum_herkeuring" Type="date" />
+          <Property Name="reg_nr" Type="varchar" MaxLength="50" />
+          <Property Name="certi_nr" Type="varchar" MaxLength="50" />
+          <Property Name="soort" Type="varchar" MaxLength="50" />
+          <Property Name="status" Type="varchar" MaxLength="50" />
+          <Property Name="certificaat" Type="varchar" MaxLength="150" />
+          <Property Name="stevens" Type="bit" />
+        </EntityType>
+        <EntityType Name="Ladder">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="datum_gekeurd" Type="date" />
+          <Property Name="datum_herkeuring" Type="date" />
+          <Property Name="LAM_nr" Type="int" />
+          <Property Name="code_nr" Type="varchar" MaxLength="50" />
+          <Property Name="bouwjaar" Type="int" />
+          <Property Name="leverancier" Type="varchar" MaxLength="50" />
+          <Property Name="merk" Type="varchar" MaxLength="50" />
+          <Property Name="benaming" Type="varchar" MaxLength="50" />
+          <Property Name="stamkaart" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="Lasapparaat">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="benaming" Type="varchar" MaxLength="50" />
+          <Property Name="merk" Type="varchar" MaxLength="50" />
+          <Property Name="locatie" Type="varchar" MaxLength="50" />
+          <Property Name="leverancier" Type="varchar" MaxLength="50" />
+          <Property Name="LAM_nr" Type="int" />
+          <Property Name="code_nr" Type="varchar" MaxLength="50" />
+          <Property Name="datum_gekeurd" Type="date" />
+          <Property Name="datum_herkeuring" Type="date" />
+          <Property Name="bouwjaar" Type="int" />
+          <Property Name="stamkaart" Type="varchar" MaxLength="150" />
+          <Property Name="stevens" Type="bit" />
+        </EntityType>
+        <EntityType Name="Meetmiddel">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="datum_gekeurd" Type="date" />
+          <Property Name="datum_herkeuring" Type="date" />
+          <Property Name="code_nr" Type="varchar" MaxLength="50" />
+          <Property Name="bouwjaar" Type="int" />
+          <Property Name="leverancier" Type="varchar" MaxLength="50" />
+          <Property Name="merk" Type="varchar" MaxLength="50" />
+          <Property Name="benaming" Type="varchar" MaxLength="50" />
+          <Property Name="stamkaart" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="Oplegger">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="datum_gekeurd" Type="date" />
+          <Property Name="datum_herkeuring" Type="date" />
+          <Property Name="code_nr" Type="varchar" MaxLength="50" />
+          <Property Name="kenteken" Type="varchar" MaxLength="50" />
+          <Property Name="locatie" Type="varchar" MaxLength="50" />
+          <Property Name="bouwjaar" Type="int" />
+          <Property Name="leverancier" Type="varchar" MaxLength="50" />
+          <Property Name="stamkaart" Type="varchar" MaxLength="150" />
+          <Property Name="benaming" Type="varchar" MaxLength="50" />
+          <Property Name="status" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Valbeveiliging">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="omschrijving" Type="varchar" MaxLength="50" />
+          <Property Name="opdr_nr" Type="varchar" MaxLength="50" />
+          <Property Name="certi_nr" Type="varchar" MaxLength="50" />
+          <Property Name="serie_nr" Type="varchar" MaxLength="50" />
+          <Property Name="datum_gekeurd" Type="date" />
+          <Property Name="datum_herkeuring" Type="date" />
+          <Property Name="persoon" Type="varchar" MaxLength="50" />
+          <Property Name="certificaat" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="Verfpomp">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="datum_gekeurd" Type="date" />
+          <Property Name="datum_herkeuring" Type="date" />
+          <Property Name="code_nr" Type="varchar" MaxLength="50" />
+          <Property Name="bouwjaar" Type="int" />
+          <Property Name="leverancier" Type="varchar" MaxLength="50" />
+          <Property Name="merk" Type="varchar" MaxLength="50" />
+          <Property Name="benaming" Type="varchar" MaxLength="50" />
+          <Property Name="stamkaart" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityContainer Name="Onderhoud_calibratieModelStoreContainer">
+          <EntitySet Name="Bovenloopkraan" EntityType="Self.Bovenloopkraan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Hefmiddel" EntityType="Self.Hefmiddel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Hijsmiddel" EntityType="Self.Hijsmiddel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ladder" EntityType="Self.Ladder" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Lasapparaat" EntityType="Self.Lasapparaat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Meetmiddel" EntityType="Self.Meetmiddel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Oplegger" EntityType="Self.Oplegger" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Valbeveiliging" EntityType="Self.Valbeveiliging" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Verfpomp" EntityType="Self.Verfpomp" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Onderhoud_calibratieModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Bovenloopkraan">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="datum_gekeurd" Type="DateTime" Precision="0" />
+          <Property Name="datum_herkeuring" Type="DateTime" Precision="0" />
+          <Property Name="code_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="locatie" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="bouwjaar" Type="Int32" />
+          <Property Name="leverancier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="benaming" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="opdracht_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="fabrieks_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="hijsvermogen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="stevens" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Hefmiddel">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="datum_gekeurd" Type="DateTime" Precision="0" />
+          <Property Name="datum_herkeuring" Type="DateTime" Precision="0" />
+          <Property Name="LAM_nr" Type="Int32" />
+          <Property Name="code_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="bouwjaar" Type="Int32" />
+          <Property Name="leverancier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="merk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="benaming" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Hijsmiddel">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="datum_gekeurd" Type="DateTime" Precision="0" />
+          <Property Name="datum_herkeuring" Type="DateTime" Precision="0" />
+          <Property Name="reg_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="certi_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="soort" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="certificaat" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="stevens" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Ladder">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="datum_gekeurd" Type="DateTime" Precision="0" />
+          <Property Name="datum_herkeuring" Type="DateTime" Precision="0" />
+          <Property Name="LAM_nr" Type="Int32" />
+          <Property Name="code_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="bouwjaar" Type="Int32" />
+          <Property Name="leverancier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="merk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="benaming" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Lasapparaat">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="benaming" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="merk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="locatie" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="leverancier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LAM_nr" Type="Int32" />
+          <Property Name="code_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="datum_gekeurd" Type="DateTime" Precision="0" />
+          <Property Name="datum_herkeuring" Type="DateTime" Precision="0" />
+          <Property Name="bouwjaar" Type="Int32" />
+          <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="stevens" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Meetmiddel">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="datum_gekeurd" Type="DateTime" Precision="0" />
+          <Property Name="datum_herkeuring" Type="DateTime" Precision="0" />
+          <Property Name="code_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="bouwjaar" Type="Int32" />
+          <Property Name="leverancier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="merk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="benaming" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Oplegger">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="datum_gekeurd" Type="DateTime" Precision="0" />
+          <Property Name="datum_herkeuring" Type="DateTime" Precision="0" />
+          <Property Name="code_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="kenteken" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="locatie" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="bouwjaar" Type="Int32" />
+          <Property Name="leverancier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="benaming" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Valbeveiliging">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="omschrijving" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="opdr_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="certi_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="serie_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="datum_gekeurd" Type="DateTime" Precision="0" />
+          <Property Name="datum_herkeuring" Type="DateTime" Precision="0" />
+          <Property Name="persoon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="certificaat" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Verfpomp">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="datum_gekeurd" Type="DateTime" Precision="0" />
+          <Property Name="datum_herkeuring" Type="DateTime" Precision="0" />
+          <Property Name="code_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="bouwjaar" Type="Int32" />
+          <Property Name="leverancier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="merk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="benaming" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="Onderhoud_calibratieEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Bovenloopkraan" EntityType="Self.Bovenloopkraan" />
+          <EntitySet Name="Hefmiddel" EntityType="Self.Hefmiddel" />
+          <EntitySet Name="Hijsmiddel" EntityType="Self.Hijsmiddel" />
+          <EntitySet Name="Ladder" EntityType="Self.Ladder" />
+          <EntitySet Name="Lasapparaat" EntityType="Self.Lasapparaat" />
+          <EntitySet Name="Meetmiddel" EntityType="Self.Meetmiddel" />
+          <EntitySet Name="Oplegger" EntityType="Self.Oplegger" />
+          <EntitySet Name="Valbeveiliging" EntityType="Self.Valbeveiliging" />
+          <EntitySet Name="Verfpomp" EntityType="Self.Verfpomp" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Onderhoud_calibratieModelStoreContainer" CdmEntityContainer="Onderhoud_calibratieEntities">
+          <EntitySetMapping Name="Bovenloopkraan">
+            <EntityTypeMapping TypeName="Onderhoud_calibratieModel.Bovenloopkraan">
+              <MappingFragment StoreEntitySet="Bovenloopkraan">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="datum_gekeurd" ColumnName="datum_gekeurd" />
+                <ScalarProperty Name="datum_herkeuring" ColumnName="datum_herkeuring" />
+                <ScalarProperty Name="code_nr" ColumnName="code_nr" />
+                <ScalarProperty Name="locatie" ColumnName="locatie" />
+                <ScalarProperty Name="bouwjaar" ColumnName="bouwjaar" />
+                <ScalarProperty Name="leverancier" ColumnName="leverancier" />
+                <ScalarProperty Name="stamkaart" ColumnName="stamkaart" />
+                <ScalarProperty Name="benaming" ColumnName="benaming" />
+                <ScalarProperty Name="opdracht_nr" ColumnName="opdracht_nr" />
+                <ScalarProperty Name="fabrieks_nr" ColumnName="fabrieks_nr" />
+                <ScalarProperty Name="hijsvermogen" ColumnName="hijsvermogen" />
+                <ScalarProperty Name="stevens" ColumnName="stevens" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Hefmiddel">
+            <EntityTypeMapping TypeName="Onderhoud_calibratieModel.Hefmiddel">
+              <MappingFragment StoreEntitySet="Hefmiddel">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="datum_gekeurd" ColumnName="datum_gekeurd" />
+                <ScalarProperty Name="datum_herkeuring" ColumnName="datum_herkeuring" />
+                <ScalarProperty Name="LAM_nr" ColumnName="LAM_nr" />
+                <ScalarProperty Name="code_nr" ColumnName="code_nr" />
+                <ScalarProperty Name="bouwjaar" ColumnName="bouwjaar" />
+                <ScalarProperty Name="leverancier" ColumnName="leverancier" />
+                <ScalarProperty Name="merk" ColumnName="merk" />
+                <ScalarProperty Name="benaming" ColumnName="benaming" />
+                <ScalarProperty Name="stamkaart" ColumnName="stamkaart" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Hijsmiddel">
+            <EntityTypeMapping TypeName="Onderhoud_calibratieModel.Hijsmiddel">
+              <MappingFragment StoreEntitySet="Hijsmiddel">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="datum_gekeurd" ColumnName="datum_gekeurd" />
+                <ScalarProperty Name="datum_herkeuring" ColumnName="datum_herkeuring" />
+                <ScalarProperty Name="reg_nr" ColumnName="reg_nr" />
+                <ScalarProperty Name="certi_nr" ColumnName="certi_nr" />
+                <ScalarProperty Name="soort" ColumnName="soort" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="certificaat" ColumnName="certificaat" />
+                <ScalarProperty Name="stevens" ColumnName="stevens" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ladder">
+            <EntityTypeMapping TypeName="Onderhoud_calibratieModel.Ladder">
+              <MappingFragment StoreEntitySet="Ladder">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="datum_gekeurd" ColumnName="datum_gekeurd" />
+                <ScalarProperty Name="datum_herkeuring" ColumnName="datum_herkeuring" />
+                <ScalarProperty Name="LAM_nr" ColumnName="LAM_nr" />
+                <ScalarProperty Name="code_nr" ColumnName="code_nr" />
+                <ScalarProperty Name="bouwjaar" ColumnName="bouwjaar" />
+                <ScalarProperty Name="leverancier" ColumnName="leverancier" />
+                <ScalarProperty Name="merk" ColumnName="merk" />
+                <ScalarProperty Name="benaming" ColumnName="benaming" />
+                <ScalarProperty Name="stamkaart" ColumnName="stamkaart" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Lasapparaat">
+            <EntityTypeMapping TypeName="Onderhoud_calibratieModel.Lasapparaat">
+              <MappingFragment StoreEntitySet="Lasapparaat">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="benaming" ColumnName="benaming" />
+                <ScalarProperty Name="merk" ColumnName="merk" />
+                <ScalarProperty Name="locatie" ColumnName="locatie" />
+                <ScalarProperty Name="leverancier" ColumnName="leverancier" />
+                <ScalarProperty Name="LAM_nr" ColumnName="LAM_nr" />
+                <ScalarProperty Name="code_nr" ColumnName="code_nr" />
+                <ScalarProperty Name="datum_gekeurd" ColumnName="datum_gekeurd" />
+                <ScalarProperty Name="datum_herkeuring" ColumnName="datum_herkeuring" />
+                <ScalarProperty Name="bouwjaar" ColumnName="bouwjaar" />
+                <ScalarProperty Name="stamkaart" ColumnName="stamkaart" />
+                <ScalarProperty Name="stevens" ColumnName="stevens" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Meetmiddel">
+            <EntityTypeMapping TypeName="Onderhoud_calibratieModel.Meetmiddel">
+              <MappingFragment StoreEntitySet="Meetmiddel">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="datum_gekeurd" ColumnName="datum_gekeurd" />
+                <ScalarProperty Name="datum_herkeuring" ColumnName="datum_herkeuring" />
+                <ScalarProperty Name="code_nr" ColumnName="code_nr" />
+                <ScalarProperty Name="bouwjaar" ColumnName="bouwjaar" />
+                <ScalarProperty Name="leverancier" ColumnName="leverancier" />
+                <ScalarProperty Name="merk" ColumnName="merk" />
+                <ScalarProperty Name="benaming" ColumnName="benaming" />
+                <ScalarProperty Name="stamkaart" ColumnName="stamkaart" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Oplegger">
+            <EntityTypeMapping TypeName="Onderhoud_calibratieModel.Oplegger">
+              <MappingFragment StoreEntitySet="Oplegger">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="datum_gekeurd" ColumnName="datum_gekeurd" />
+                <ScalarProperty Name="datum_herkeuring" ColumnName="datum_herkeuring" />
+                <ScalarProperty Name="code_nr" ColumnName="code_nr" />
+                <ScalarProperty Name="kenteken" ColumnName="kenteken" />
+                <ScalarProperty Name="locatie" ColumnName="locatie" />
+                <ScalarProperty Name="bouwjaar" ColumnName="bouwjaar" />
+                <ScalarProperty Name="leverancier" ColumnName="leverancier" />
+                <ScalarProperty Name="stamkaart" ColumnName="stamkaart" />
+                <ScalarProperty Name="benaming" ColumnName="benaming" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Valbeveiliging">
+            <EntityTypeMapping TypeName="Onderhoud_calibratieModel.Valbeveiliging">
+              <MappingFragment StoreEntitySet="Valbeveiliging">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="omschrijving" ColumnName="omschrijving" />
+                <ScalarProperty Name="opdr_nr" ColumnName="opdr_nr" />
+                <ScalarProperty Name="certi_nr" ColumnName="certi_nr" />
+                <ScalarProperty Name="serie_nr" ColumnName="serie_nr" />
+                <ScalarProperty Name="datum_gekeurd" ColumnName="datum_gekeurd" />
+                <ScalarProperty Name="datum_herkeuring" ColumnName="datum_herkeuring" />
+                <ScalarProperty Name="persoon" ColumnName="persoon" />
+                <ScalarProperty Name="certificaat" ColumnName="certificaat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Verfpomp">
+            <EntityTypeMapping TypeName="Onderhoud_calibratieModel.Verfpomp">
+              <MappingFragment StoreEntitySet="Verfpomp">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="datum_gekeurd" ColumnName="datum_gekeurd" />
+                <ScalarProperty Name="datum_herkeuring" ColumnName="datum_herkeuring" />
+                <ScalarProperty Name="code_nr" ColumnName="code_nr" />
+                <ScalarProperty Name="bouwjaar" ColumnName="bouwjaar" />
+                <ScalarProperty Name="leverancier" ColumnName="leverancier" />
+                <ScalarProperty Name="merk" ColumnName="merk" />
+                <ScalarProperty Name="benaming" ColumnName="benaming" />
+                <ScalarProperty Name="stamkaart" ColumnName="stamkaart" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

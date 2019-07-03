@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="Lammers.View.Valbeveiliging.ValbeveiligingsOverzichtView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lammers.View.Valbeveiliging"
+        mc:Ignorable="d"
+        DataContext="{Binding ValbeveiligingsOverzicht, Source={StaticResource Locator}}" Width="1267.816">
+    <Grid>
+
+        <DataGrid x:Name="Grid" AutoGenerateColumns="False" CanUserDeleteRows="False"
+                      SelectedItem="{Binding SelectedValbeveiliging, Mode=TwoWay}" IsReadOnly="True"
+                      ItemsSource="{Binding Valbeveiliging, UpdateSourceTrigger = PropertyChanged}" Margin="11,102,9,32"
+                      BorderBrush="#FF979494" GridLinesVisibility="Horizontal" HorizontalGridLinesBrush="#FFF0E0E0"
+                      HeadersVisibility="Column">
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="#" Binding="{Binding Id}" Foreground="#FF1D1616" />
+                <DataGridTextColumn Header="Omschrijving" Binding="{Binding omschrijving}" Width="*"  />
+                <DataGridTextColumn Header="Opdracht nummer" Binding="{Binding opdr_nr}"  Width="*" />
+                <DataGridTextColumn Header="Persoon" Binding="{Binding persoon}" Width="*"   />
+                <DataGridTextColumn Header="Serie nr" Binding="{Binding serie_nr }" Width="*"   />
+                <DataGridTextColumn Header="Datum gekeurd" Binding="{Binding datum_gekeurd}" Width="*"   />
+                <DataGridTextColumn Header="Datum herkeuring" Binding="{Binding datum_herkeuring}" Width="*"   />
+            </DataGrid.Columns>
+
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="FontSize" Value="16" />
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+
+            <DataGrid.InputBindings>
+                <KeyBinding Key="Delete" Command="{Binding DeleteValbeveiligingCommand}" />
+            </DataGrid.InputBindings>
+
+        </DataGrid>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="29" Margin="10,60,0,0" TextWrapping="Wrap"
+                     Text="{Binding SearchString, UpdateSourceTrigger=PropertyChanged}" FontSize="20"
+                     VerticalAlignment="Top" Width="1248" />
+        <Button x:Name="button2" Command="{Binding BackCommand}" HorizontalAlignment="Left" Margin="129,3,0,0" VerticalAlignment="Top" Width="75" Height="44">
+            <Image x:Name="image" Source="/Images/arrow-back-128.png" Height="44" Width="75" RenderTransformOrigin="-0.18,0.568"/>
+        </Button>
+        <Button x:Name="button3" Command="{Binding HomeCommand}" HorizontalAlignment="Left" Height="47" VerticalAlignment="Top" Width="91">
+            <Image x:Name="image1" Source="/Images/lammers_logo.jpg" HorizontalAlignment="Left" Height="44" VerticalAlignment="Top" Width="88" />
+        </Button>
+        <Button x:Name="button" Content="Maak valbeveiliging" Command="{Binding AddValbeveiligingCommand}" FontSize="20" HorizontalAlignment="Left" Margin="254,9,0,0" VerticalAlignment="Top" Width="195" Height="38"/>
+        <Button x:Name="button_Copy" Content="Wijzig valbeveiliging" Command="{Binding EditValbeveiligingCommand}" FontSize="20" HorizontalAlignment="Left" Margin="478,10,0,0" VerticalAlignment="Top" Width="203" Height="37"/>
+        <Button x:Name="button_Copy1" Content="Verwijder valbeveiliging" Command="{Binding DeleteValbeveiligingCommand}" FontSize="20" HorizontalAlignment="Left" Margin="701,10,0,0" VerticalAlignment="Top" Width="227" Height="37"/>
+        <Button Content="Open certificaat" Command="{Binding OpenCertificateCommand}" HorizontalAlignment="Left" Margin="961,10,0,0" VerticalAlignment="Top" FontSize="20" Width="161" Height="37"/>
+    </Grid>
+</UserControl>

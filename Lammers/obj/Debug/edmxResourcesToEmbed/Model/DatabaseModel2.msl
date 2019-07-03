@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Onderhoud_calibratieModelStoreContainer" CdmEntityContainer="Onderhoud_calibratieEntities">
+    <EntitySetMapping Name="Hijsmiddel">
+      <EntityTypeMapping TypeName="Onderhoud_calibratieModel.Hijsmiddel">
+        <MappingFragment StoreEntitySet="Hijsmiddel">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="datum_gekeurd" ColumnName="datum_gekeurd" />
+          <ScalarProperty Name="datum_herkeuring" ColumnName="datum_herkeuring" />
+          <ScalarProperty Name="reg_nr" ColumnName="reg_nr" />
+          <ScalarProperty Name="certi_nr" ColumnName="certi_nr" />
+          <ScalarProperty Name="soort" ColumnName="soort" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="certificaat" ColumnName="certificaat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bovenloopkraan">
+      <EntityTypeMapping TypeName="Onderhoud_calibratieModel.Bovenloopkraan">
+        <MappingFragment StoreEntitySet="Bovenloopkraan">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="datum_gekeurd" ColumnName="datum_gekeurd" />
+          <ScalarProperty Name="datum_herkeuring" ColumnName="datum_herkeuring" />
+          <ScalarProperty Name="code_nr" ColumnName="code_nr" />
+          <ScalarProperty Name="locatie" ColumnName="locatie" />
+          <ScalarProperty Name="bouwjaar" ColumnName="bouwjaar" />
+          <ScalarProperty Name="leverancier" ColumnName="leverancier" />
+          <ScalarProperty Name="stamkaart" ColumnName="stamkaart" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lasapparaat">
+      <EntityTypeMapping TypeName="Onderhoud_calibratieModel.Lasapparaat">
+        <MappingFragment StoreEntitySet="Lasapparaat">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="benaming" ColumnName="benaming" />
+          <ScalarProperty Name="merk" ColumnName="merk" />
+          <ScalarProperty Name="locatie" ColumnName="locatie" />
+          <ScalarProperty Name="leverancier" ColumnName="leverancier" />
+          <ScalarProperty Name="LAM_nr" ColumnName="LAM_nr" />
+          <ScalarProperty Name="code_nr" ColumnName="code_nr" />
+          <ScalarProperty Name="datum_gekeurd" ColumnName="datum_gekeurd" />
+          <ScalarProperty Name="datum_herkeuring" ColumnName="datum_herkeuring" />
+          <ScalarProperty Name="bouwjaar" ColumnName="bouwjaar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Oplegger">
+      <EntityTypeMapping TypeName="Onderhoud_calibratieModel.Oplegger">
+        <MappingFragment StoreEntitySet="Oplegger">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="datum_gekeurd" ColumnName="datum_gekeurd" />
+          <ScalarProperty Name="datum_herkeuring" ColumnName="datum_herkeuring" />
+          <ScalarProperty Name="code_nr" ColumnName="code_nr" />
+          <ScalarProperty Name="kenteken" ColumnName="kenteken" />
+          <ScalarProperty Name="locatie" ColumnName="locatie" />
+          <ScalarProperty Name="bouwjaar" ColumnName="bouwjaar" />
+          <ScalarProperty Name="leverancier" ColumnName="leverancier" />
+          <ScalarProperty Name="stamkaart" ColumnName="stamkaart" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Valbeveiliging">
+      <EntityTypeMapping TypeName="Onderhoud_calibratieModel.Valbeveiliging">
+        <MappingFragment StoreEntitySet="Valbeveiliging">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="omschrijving" ColumnName="omschrijving" />
+          <ScalarProperty Name="opdr_nr" ColumnName="opdr_nr" />
+          <ScalarProperty Name="certi_nr" ColumnName="certi_nr" />
+          <ScalarProperty Name="serie_nr" ColumnName="serie_nr" />
+          <ScalarProperty Name="datum_gekeurd" ColumnName="datum_gekeurd" />
+          <ScalarProperty Name="datum_herkeuring" ColumnName="datum_herkeuring" />
+          <ScalarProperty Name="persoon" ColumnName="persoon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

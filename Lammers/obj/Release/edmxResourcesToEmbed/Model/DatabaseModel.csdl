@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Onderhoud_calibratieModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Bovenloopkraan">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="datum_gekeurd" Type="DateTime" Precision="0" />
+    <Property Name="datum_herkeuring" Type="DateTime" Precision="0" />
+    <Property Name="code_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="locatie" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bouwjaar" Type="Int32" />
+    <Property Name="leverancier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="benaming" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="opdracht_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fabrieks_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hijsvermogen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="stevens" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Hefmiddel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="datum_gekeurd" Type="DateTime" Precision="0" />
+    <Property Name="datum_herkeuring" Type="DateTime" Precision="0" />
+    <Property Name="LAM_nr" Type="Int32" />
+    <Property Name="code_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bouwjaar" Type="Int32" />
+    <Property Name="leverancier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="merk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="benaming" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Hijsmiddel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="datum_gekeurd" Type="DateTime" Precision="0" />
+    <Property Name="datum_herkeuring" Type="DateTime" Precision="0" />
+    <Property Name="reg_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="certi_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="soort" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="certificaat" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="stevens" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Ladder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="datum_gekeurd" Type="DateTime" Precision="0" />
+    <Property Name="datum_herkeuring" Type="DateTime" Precision="0" />
+    <Property Name="LAM_nr" Type="Int32" />
+    <Property Name="code_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bouwjaar" Type="Int32" />
+    <Property Name="leverancier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="merk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="benaming" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Lasapparaat">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="benaming" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="merk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="locatie" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="leverancier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAM_nr" Type="Int32" />
+    <Property Name="code_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="datum_gekeurd" Type="DateTime" Precision="0" />
+    <Property Name="datum_herkeuring" Type="DateTime" Precision="0" />
+    <Property Name="bouwjaar" Type="Int32" />
+    <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="stevens" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Meetmiddel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="datum_gekeurd" Type="DateTime" Precision="0" />
+    <Property Name="datum_herkeuring" Type="DateTime" Precision="0" />
+    <Property Name="code_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bouwjaar" Type="Int32" />
+    <Property Name="leverancier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="merk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="benaming" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Oplegger">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="datum_gekeurd" Type="DateTime" Precision="0" />
+    <Property Name="datum_herkeuring" Type="DateTime" Precision="0" />
+    <Property Name="code_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="kenteken" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="locatie" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bouwjaar" Type="Int32" />
+    <Property Name="leverancier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="benaming" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Valbeveiliging">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="omschrijving" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="opdr_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="certi_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="serie_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="datum_gekeurd" Type="DateTime" Precision="0" />
+    <Property Name="datum_herkeuring" Type="DateTime" Precision="0" />
+    <Property Name="persoon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="certificaat" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Verfpomp">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="datum_gekeurd" Type="DateTime" Precision="0" />
+    <Property Name="datum_herkeuring" Type="DateTime" Precision="0" />
+    <Property Name="code_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bouwjaar" Type="Int32" />
+    <Property Name="leverancier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="merk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="benaming" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="Onderhoud_calibratieEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Bovenloopkraan" EntityType="Self.Bovenloopkraan" />
+    <EntitySet Name="Hefmiddel" EntityType="Self.Hefmiddel" />
+    <EntitySet Name="Hijsmiddel" EntityType="Self.Hijsmiddel" />
+    <EntitySet Name="Ladder" EntityType="Self.Ladder" />
+    <EntitySet Name="Lasapparaat" EntityType="Self.Lasapparaat" />
+    <EntitySet Name="Meetmiddel" EntityType="Self.Meetmiddel" />
+    <EntitySet Name="Oplegger" EntityType="Self.Oplegger" />
+    <EntitySet Name="Valbeveiliging" EntityType="Self.Valbeveiliging" />
+    <EntitySet Name="Verfpomp" EntityType="Self.Verfpomp" />
+  </EntityContainer>
+</Schema>

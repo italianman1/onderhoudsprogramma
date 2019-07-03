@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="Lammers.View.HomeView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lammers.View"
+        mc:Ignorable="d">
+    <Grid Background="White">
+        <Image x:Name="image" Source="/Images/lammers_logo.jpg" HorizontalAlignment="Left" Height="70" VerticalAlignment="Top" Width="138"/>
+        <Label x:Name="label" FontSize="32" FontFamily="Verdana" Content="Onderhoud en Calibratie" HorizontalAlignment="Left" Margin="43,111,0,0" VerticalAlignment="Top" Height="55" Width="404"/>
+        <Button x:Name="button1" FontSize="24" Content="Klik hier om verder te gaan" Command="{Binding MenuOverzichtCommand}" HorizontalAlignment="Left" Margin="92,192,0,0" VerticalAlignment="Top" Width="309" Height="59"/>
+        <Label x:Name="label1" Content="Lammers Constructie 2017 ©" HorizontalAlignment="Left" Margin="10,262,0,0" VerticalAlignment="Top" Height="24" Width="168"/>
+    </Grid>
+</UserControl>
