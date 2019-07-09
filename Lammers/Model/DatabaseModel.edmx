@@ -23,6 +23,22 @@
           <Property Name="hijsvermogen" Type="varchar" MaxLength="50" />
           <Property Name="stevens" Type="bit" />
         </EntityType>
+        <EntityType Name="Compressor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="datum_gekeurd" Type="date" />
+          <Property Name="datum_herkeuring" Type="date" />
+          <Property Name="merk" Type="varchar" MaxLength="50" />
+          <Property Name="type" Type="varchar" MaxLength="50" />
+          <Property Name="bouwjaar" Type="int" />
+          <Property Name="leverancier" Type="varchar" MaxLength="50" />
+          <Property Name="product_nr" Type="varchar" MaxLength="50" />
+          <Property Name="serie_nr" Type="varchar" MaxLength="50" />
+          <Property Name="benaming" Type="varchar" MaxLength="50" />
+          <Property Name="stamkaart" Type="varchar" MaxLength="150" />
+        </EntityType>
         <EntityType Name="Hefmiddel">
           <Key>
             <PropertyRef Name="Id" />
@@ -144,6 +160,7 @@
         </EntityType>
         <EntityContainer Name="Onderhoud_calibratieModelStoreContainer">
           <EntitySet Name="Bovenloopkraan" EntityType="Self.Bovenloopkraan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Compressor" EntityType="Self.Compressor" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Hefmiddel" EntityType="Self.Hefmiddel" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Hijsmiddel" EntityType="Self.Hijsmiddel" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Ladder" EntityType="Self.Ladder" Schema="dbo" store:Type="Tables" />
@@ -175,6 +192,22 @@
           <Property Name="fabrieks_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="hijsvermogen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="stevens" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Compressor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="datum_gekeurd" Type="DateTime" Precision="0" />
+          <Property Name="datum_herkeuring" Type="DateTime" Precision="0" />
+          <Property Name="merk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="bouwjaar" Type="Int32" />
+          <Property Name="leverancier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="product_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="serie_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="benaming" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Hefmiddel">
           <Key>
@@ -297,6 +330,7 @@
         </EntityType>
         <EntityContainer Name="Onderhoud_calibratieEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Bovenloopkraan" EntityType="Self.Bovenloopkraan" />
+          <EntitySet Name="Compressor" EntityType="Self.Compressor" />
           <EntitySet Name="Hefmiddel" EntityType="Self.Hefmiddel" />
           <EntitySet Name="Hijsmiddel" EntityType="Self.Hijsmiddel" />
           <EntitySet Name="Ladder" EntityType="Self.Ladder" />
@@ -328,6 +362,23 @@
                 <ScalarProperty Name="fabrieks_nr" ColumnName="fabrieks_nr" />
                 <ScalarProperty Name="hijsvermogen" ColumnName="hijsvermogen" />
                 <ScalarProperty Name="stevens" ColumnName="stevens" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Compressor">
+            <EntityTypeMapping TypeName="Onderhoud_calibratieModel.Compressor">
+              <MappingFragment StoreEntitySet="Compressor">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="datum_gekeurd" ColumnName="datum_gekeurd" />
+                <ScalarProperty Name="datum_herkeuring" ColumnName="datum_herkeuring" />
+                <ScalarProperty Name="merk" ColumnName="merk" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="bouwjaar" ColumnName="bouwjaar" />
+                <ScalarProperty Name="leverancier" ColumnName="leverancier" />
+                <ScalarProperty Name="product_nr" ColumnName="product_nr" />
+                <ScalarProperty Name="serie_nr" ColumnName="serie_nr" />
+                <ScalarProperty Name="benaming" ColumnName="benaming" />
+                <ScalarProperty Name="stamkaart" ColumnName="stamkaart" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

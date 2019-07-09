@@ -42,7 +42,7 @@ namespace Lammers.ViewModel.Hefmiddelen
                 {
                     if (Hefmiddel.datum_herkeuring < DateTime.Today)
                     {
-                        Hefmiddelen_keuring.Add(Hefmiddel.benaming + " LAM " + Hefmiddel.LAM_nr + ", Datum herkeuring: " + Hefmiddel.datum_herkeuring.Value.ToShortDateString());
+                        Hefmiddelen_keuring.Add(Hefmiddel.benaming + " " + Hefmiddel.merk + ", Datum herkeuring: " + Hefmiddel.datum_herkeuring.Value.ToShortDateString());
                     }
 
                 }

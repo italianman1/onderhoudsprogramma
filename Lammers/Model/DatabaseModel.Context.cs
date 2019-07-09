@@ -26,6 +26,7 @@ namespace Lammers.Model
         }
     
         public virtual DbSet<Bovenloopkraan> Bovenloopkraan { get; set; }
+        public virtual DbSet<Compressor> Compressor { get; set; }
         public virtual DbSet<Hefmiddel> Hefmiddel { get; set; }
         public virtual DbSet<Hijsmiddel> Hijsmiddel { get; set; }
         public virtual DbSet<Ladder> Ladder { get; set; }

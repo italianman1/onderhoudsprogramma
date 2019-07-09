@@ -25,7 +25,7 @@
             </Button.RenderTransform>
         </Button>
         <Button x:Name="button4" Content="Verfpompen" Command="{Binding VerfpompView}" HorizontalAlignment="Left" Margin="10,204.964,0,0" VerticalAlignment="Top" Width="125" Grid.Row="1"/>
-        <Button x:Name="button5" Content="Vaste machines" HorizontalAlignment="Left" Margin="176,17.964,0,0" VerticalAlignment="Top" Width="114" Height="24" Grid.Row="1"/>
+        <Button x:Name="button5" Content="Compressoren" Command="{Binding CompressorView}" HorizontalAlignment="Left" Margin="176,17.964,0,0" VerticalAlignment="Top" Width="114" Height="24" Grid.Row="1"/>
         <Button x:Name="button6" Content="Valbeveiliging" Command="{Binding ValbeveiligingView}" HorizontalAlignment="Left" Margin="176,64.964,0,0" VerticalAlignment="Top" Width="114" Grid.Row="1"/>
         <Button x:Name="button7" Content="Veiligheid" HorizontalAlignment="Left" Margin="176,113.964,0,0" VerticalAlignment="Top" Width="114" Grid.Row="1"/>
         <Button x:Name="button8" Content="Opleggers/aanhangers" Command="{Binding OpleggerView}" HorizontalAlignment="Left" Margin="150,161.964,0,0" VerticalAlignment="Top" Width="140" Grid.Row="1"/>

@@ -20,6 +20,23 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Compressor">
+      <EntityTypeMapping TypeName="Onderhoud_calibratieModel.Compressor">
+        <MappingFragment StoreEntitySet="Compressor">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="datum_gekeurd" ColumnName="datum_gekeurd" />
+          <ScalarProperty Name="datum_herkeuring" ColumnName="datum_herkeuring" />
+          <ScalarProperty Name="merk" ColumnName="merk" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="bouwjaar" ColumnName="bouwjaar" />
+          <ScalarProperty Name="leverancier" ColumnName="leverancier" />
+          <ScalarProperty Name="product_nr" ColumnName="product_nr" />
+          <ScalarProperty Name="serie_nr" ColumnName="serie_nr" />
+          <ScalarProperty Name="benaming" ColumnName="benaming" />
+          <ScalarProperty Name="stamkaart" ColumnName="stamkaart" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Hefmiddel">
       <EntityTypeMapping TypeName="Onderhoud_calibratieModel.Hefmiddel">
         <MappingFragment StoreEntitySet="Hefmiddel">

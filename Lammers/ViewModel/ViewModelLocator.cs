@@ -14,6 +14,7 @@
 
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
+using Lammers.ViewModel.Compressoren;
 using Lammers.ViewModel.Hefmiddelen;
 using Lammers.ViewModel.Hijsmiddelen;
 using Lammers.ViewModel.Kranen;
@@ -76,6 +77,9 @@ namespace Lammers.ViewModel
             SimpleIoc.Default.Register<AddHefmiddelViewModel>();
             SimpleIoc.Default.Register<EditHefmiddelViewModel>();
             SimpleIoc.Default.Register<HefmiddelOverzichtViewModel>();
+            SimpleIoc.Default.Register<AddCompressorViewModel>();
+            SimpleIoc.Default.Register<EditCompressorViewModel>();
+            SimpleIoc.Default.Register<CompressorOverzichtViewModel>();
         }
 
         public MainViewModel Main
@@ -308,6 +312,30 @@ namespace Lammers.ViewModel
             get
             {
                 return new EditHefmiddelViewModel(Hefmiddelen);
+            }
+        }
+
+        public CompressorOverzichtViewModel Compressoren
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<CompressorOverzichtViewModel>();
+            }
+        }
+
+        public AddCompressorViewModel AddCompressor
+        {
+            get
+            {
+                return new AddCompressorViewModel(Compressoren);
+            }
+        }
+
+        public EditCompressorViewModel EditCompressor
+        {
+            get
+            {
+                return new EditCompressorViewModel(Compressoren);
             }
         }
 

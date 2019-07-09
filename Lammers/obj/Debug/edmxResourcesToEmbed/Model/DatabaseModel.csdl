@@ -18,6 +18,22 @@
     <Property Name="hijsvermogen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="stevens" Type="Boolean" />
   </EntityType>
+  <EntityType Name="Compressor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="datum_gekeurd" Type="DateTime" Precision="0" />
+    <Property Name="datum_herkeuring" Type="DateTime" Precision="0" />
+    <Property Name="merk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bouwjaar" Type="Int32" />
+    <Property Name="leverancier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="product_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="serie_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="benaming" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
   <EntityType Name="Hefmiddel">
     <Key>
       <PropertyRef Name="Id" />
@@ -139,6 +155,7 @@
   </EntityType>
   <EntityContainer Name="Onderhoud_calibratieEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Bovenloopkraan" EntityType="Self.Bovenloopkraan" />
+    <EntitySet Name="Compressor" EntityType="Self.Compressor" />
     <EntitySet Name="Hefmiddel" EntityType="Self.Hefmiddel" />
     <EntitySet Name="Hijsmiddel" EntityType="Self.Hijsmiddel" />
     <EntitySet Name="Ladder" EntityType="Self.Ladder" />

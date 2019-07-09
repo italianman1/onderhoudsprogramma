@@ -147,6 +147,9 @@
     <Compile Include="Model\Bovenloopkraan.cs">
       <DependentUpon>DatabaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\Compressor.cs">
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\DatabaseModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -186,6 +189,9 @@
     <Compile Include="Model\Verfpomp.cs">
       <DependentUpon>DatabaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\Compressoren\AddCompressorViewModel.cs" />
+    <Compile Include="ViewModel\Compressoren\EditCompressorViewModel.cs" />
+    <Compile Include="ViewModel\Compressoren\CompressorOverzichtViewModel.cs" />
     <Compile Include="ViewModel\Hefmiddelen\AddHefmiddelViewModel.cs" />
     <Compile Include="ViewModel\Hefmiddelen\EditHefmiddelViewModel.cs" />
     <Compile Include="ViewModel\Hefmiddelen\HefmiddelOverzichtViewModel.cs" />
@@ -214,6 +220,15 @@
     <Compile Include="ViewModel\Verfpompen\AddVerfpompViewModel.cs" />
     <Compile Include="ViewModel\Verfpompen\EditVerfpompViewModel.cs" />
     <Compile Include="ViewModel\Verfpompen\VerfpompOverzichtViewModel.cs" />
+    <Compile Include="View\Compressoren\AddCompressorView.xaml.cs">
+      <DependentUpon>AddCompressorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Compressoren\EditCompressorView.xaml.cs">
+      <DependentUpon>EditCompressorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Compressoren\CompressorOverzichtView.xaml.cs">
+      <DependentUpon>CompressorOverzichtView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Hefmiddelen\AddHefmiddelView.xaml.cs">
       <DependentUpon>AddHefmiddelView.xaml</DependentUpon>
     </Compile>
@@ -306,6 +321,18 @@
     <Compile Include="View\Verfpompen\VerfpompOverzichtView.xaml.cs">
       <DependentUpon>VerfpompOverzichtView.xaml</DependentUpon>
     </Compile>
+    <Page Include="View\Compressoren\AddCompressorView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Compressoren\EditCompressorView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Compressoren\CompressorOverzichtView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="View\Hefmiddelen\AddHefmiddelView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
