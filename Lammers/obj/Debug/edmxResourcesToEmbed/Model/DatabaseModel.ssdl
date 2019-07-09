@@ -1,5 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="Onderhoud_calibratieModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AlgemeenItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="leverancier" Type="varchar" MaxLength="50" />
+    <Property Name="bouwjaar" Type="int" />
+    <Property Name="benaming" Type="varchar" MaxLength="50" />
+    <Property Name="code_nr" Type="varchar" MaxLength="50" />
+    <Property Name="datum_gekeurd" Type="date" />
+    <Property Name="datum_herkeuring" Type="date" />
+    <Property Name="stamkaart" Type="varchar" MaxLength="150" />
+  </EntityType>
   <EntityType Name="Bovenloopkraan">
     <Key>
       <PropertyRef Name="Id" />
@@ -154,6 +167,7 @@
     <Property Name="stamkaart" Type="varchar" MaxLength="150" />
   </EntityType>
   <EntityContainer Name="Onderhoud_calibratieModelStoreContainer">
+    <EntitySet Name="AlgemeenItem" EntityType="Self.AlgemeenItem" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Bovenloopkraan" EntityType="Self.Bovenloopkraan" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Compressor" EntityType="Self.Compressor" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Hefmiddel" EntityType="Self.Hefmiddel" Schema="dbo" store:Type="Tables" />

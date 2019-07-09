@@ -144,6 +144,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\AlgemeenItem.cs">
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\Bovenloopkraan.cs">
       <DependentUpon>DatabaseModel.tt</DependentUpon>
     </Compile>
@@ -189,6 +192,9 @@
     <Compile Include="Model\Verfpomp.cs">
       <DependentUpon>DatabaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\Algemeen\AddAlgemeenViewModel.cs" />
+    <Compile Include="ViewModel\Algemeen\EditAlgemeenViewModel.cs" />
+    <Compile Include="ViewModel\Algemeen\AlgemeenOverzichtViewModel.cs" />
     <Compile Include="ViewModel\Compressoren\AddCompressorViewModel.cs" />
     <Compile Include="ViewModel\Compressoren\EditCompressorViewModel.cs" />
     <Compile Include="ViewModel\Compressoren\CompressorOverzichtViewModel.cs" />
@@ -220,6 +226,15 @@
     <Compile Include="ViewModel\Verfpompen\AddVerfpompViewModel.cs" />
     <Compile Include="ViewModel\Verfpompen\EditVerfpompViewModel.cs" />
     <Compile Include="ViewModel\Verfpompen\VerfpompOverzichtViewModel.cs" />
+    <Compile Include="View\Algemeen\AddAlgemeenView.xaml.cs">
+      <DependentUpon>AddAlgemeenView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Algemeen\AlgemeenOverzichtView.xaml.cs">
+      <DependentUpon>AlgemeenOverzichtView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Algemeen\EditAlgemeenView.xaml.cs">
+      <DependentUpon>EditAlgemeenView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Compressoren\AddCompressorView.xaml.cs">
       <DependentUpon>AddCompressorView.xaml</DependentUpon>
     </Compile>
@@ -321,6 +336,18 @@
     <Compile Include="View\Verfpompen\VerfpompOverzichtView.xaml.cs">
       <DependentUpon>VerfpompOverzichtView.xaml</DependentUpon>
     </Compile>
+    <Page Include="View\Algemeen\AddAlgemeenView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Algemeen\AlgemeenOverzichtView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Algemeen\EditAlgemeenView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="View\Compressoren\AddCompressorView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -534,7 +561,6 @@
   <ItemGroup>
     <Resource Include="lammers_constructie_mci_icon.ico" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="Model\DatabaseModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

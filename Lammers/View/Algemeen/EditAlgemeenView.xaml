@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="Lammers.View.Algemeen.EditAlgemeenView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lammers.View.Algemeen"
+        mc:Ignorable="d"
+        DataContext="{Binding EditAlgemeen, Source={StaticResource Locator}}">
+    <Grid Height="420">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="label" Content="Bewerk een algemeen item" FontFamily="Arial" FontSize="20" HorizontalAlignment="Left" Margin="60,1,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Datum gekeurd" HorizontalAlignment="Left" Margin="25,50,0,0" VerticalAlignment="Top" Height="31" Width="95"/>
+        <Label x:Name="label3" Content="Datum herkeuring" HorizontalAlignment="Left" Margin="25,94,0,0" VerticalAlignment="Top" Height="33" Width="108"/>
+        <Label x:Name="label5" Content="Code nummer" HorizontalAlignment="Left" Margin="22,142,0,0" VerticalAlignment="Top" Height="33" Width="111"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="29" Margin="159,146,0,0" TextWrapping="Wrap" Text="{Binding Codenummer}" VerticalAlignment="Top" Width="131"/>
+        <Label x:Name="label6" Content="Bouwjaar" HorizontalAlignment="Left" Margin="22,201,0,0" VerticalAlignment="Top" Height="33" Width="76"/>
+        <DatePicker HorizontalAlignment="Left" SelectedDate="{Binding Keuringdatum}" Margin="159,50,0,0" VerticalAlignment="Top" Width="131" Height="28"/>
+        <DatePicker HorizontalAlignment="Left" SelectedDate="{Binding Herkeuringsdatum}" Margin="159,97,0,0" VerticalAlignment="Top" Width="131" Height="30"/>
+        <Button x:Name="button2" Command="{Binding BackCommand}" HorizontalAlignment="Left" Margin="10,2,0,0" VerticalAlignment="Top" Width="45" Height="24">
+            <Image x:Name="image" Source="/Images/arrow-back-128.png" Height="24" Width="35"/>
+        </Button>
+        <Button x:Name="button1" Content="Bewerk item" Command="{Binding EditAlgemeen}" HorizontalAlignment="Left" Margin="162,366,0,0" VerticalAlignment="Top" Width="128"/>
+        <Image x:Name="image1" Source="/Images/lammers_logo.jpg" HorizontalAlignment="Left" Height="36" Margin="22,358,0,0" VerticalAlignment="Top" Width="73"/>
+        <Label x:Name="label6_Copy" Content="Leverancier" HorizontalAlignment="Left" Margin="22,248,0,0" VerticalAlignment="Top" Height="33" Width="76"/>
+        <Label x:Name="label6_Copy2" Content="Benaming" HorizontalAlignment="Left" Margin="22,292,0,0" VerticalAlignment="Top" Height="33" Width="76"/>
+        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Height="27" Margin="159,248,0,0" TextWrapping="Wrap" Text="{Binding Leverancier}" VerticalAlignment="Top" Width="131"/>
+        <TextBox x:Name="textBox_Copy2" HorizontalAlignment="Left" Height="27" Margin="159,292,0,0" TextWrapping="Wrap" Text="{Binding Benaming}" VerticalAlignment="Top" Width="131"/>
+        <TextBox x:Name="textBox2"  HorizontalAlignment="Left" Height="23" Margin="159,201,0,0" TextWrapping="Wrap" Text="{Binding Bouwjaar}" VerticalAlignment="Top" Width="129"/>
+        <Button Content="{Binding fileText}" Command="{Binding ChooseCertificate}" HorizontalAlignment="Left" Margin="162,327,0,0" VerticalAlignment="Top" Width="128"/>
+        <Label Content="Kies certificaat" HorizontalAlignment="Left" Margin="22,327,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</UserControl>

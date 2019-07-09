@@ -150,26 +150,16 @@ namespace Lammers.ViewModel.Ladders
 
         public void openCertificate()
         {
-            if (SelectedLadder != null)
 
-                if (SelectedLadder.stamkaart == null)
-                    MessageBox.Show("Deze ladder heeft geen bijgevoegde stamkaart");
+            try
+            {
+                System.Diagnostics.Process.Start("M:\\Certificaten onderhoudsprogramma\\Ladders\\Testresultaten.pdf");
+            }
 
-                else
-                    try
-                    {
-                        System.Diagnostics.Process.Start(SelectedLadder.stamkaart);
-                    }
-
-                    catch (Exception e)
-                    {
-                        MessageBox.Show(e.Message);
-                    }
-
-
-
-            else
-                MessageBox.Show("Selecteer alstublieft eerst een ladder waarvan u de stamkaart wilt openen");
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
 
         }
 

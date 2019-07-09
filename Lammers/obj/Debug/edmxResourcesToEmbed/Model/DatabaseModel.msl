@@ -1,6 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="Onderhoud_calibratieModelStoreContainer" CdmEntityContainer="Onderhoud_calibratieEntities">
+    <EntitySetMapping Name="AlgemeenItem">
+      <EntityTypeMapping TypeName="Onderhoud_calibratieModel.AlgemeenItem">
+        <MappingFragment StoreEntitySet="AlgemeenItem">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="leverancier" ColumnName="leverancier" />
+          <ScalarProperty Name="bouwjaar" ColumnName="bouwjaar" />
+          <ScalarProperty Name="benaming" ColumnName="benaming" />
+          <ScalarProperty Name="code_nr" ColumnName="code_nr" />
+          <ScalarProperty Name="datum_gekeurd" ColumnName="datum_gekeurd" />
+          <ScalarProperty Name="datum_herkeuring" ColumnName="datum_herkeuring" />
+          <ScalarProperty Name="stamkaart" ColumnName="stamkaart" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Bovenloopkraan">
       <EntityTypeMapping TypeName="Onderhoud_calibratieModel.Bovenloopkraan">
         <MappingFragment StoreEntitySet="Bovenloopkraan">

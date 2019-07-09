@@ -1,5 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="Onderhoud_calibratieModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AlgemeenItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="leverancier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bouwjaar" Type="Int32" />
+    <Property Name="benaming" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="code_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="datum_gekeurd" Type="DateTime" Precision="0" />
+    <Property Name="datum_herkeuring" Type="DateTime" Precision="0" />
+    <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
   <EntityType Name="Bovenloopkraan">
     <Key>
       <PropertyRef Name="Id" />
@@ -154,6 +167,7 @@
     <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityContainer Name="Onderhoud_calibratieEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AlgemeenItem" EntityType="Self.AlgemeenItem" />
     <EntitySet Name="Bovenloopkraan" EntityType="Self.Bovenloopkraan" />
     <EntitySet Name="Compressor" EntityType="Self.Compressor" />
     <EntitySet Name="Hefmiddel" EntityType="Self.Hefmiddel" />

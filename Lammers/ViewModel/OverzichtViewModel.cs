@@ -20,6 +20,7 @@ using Lammers.View.Verfpompen;
 using Lammers.View.Meetmiddelen;
 using Lammers.View.Ladders;
 using Lammers.View.Compressoren;
+using Lammers.View.Algemeen;
 
 namespace Lammers.ViewModel
 {
@@ -38,6 +39,7 @@ namespace Lammers.ViewModel
         public ICommand MeetmiddelView { get; set; }
         public ICommand HefmiddelView { get; set; }
         public ICommand CompressorView { get; set; }
+        public ICommand AlgemeenView { get; set; }
 
         public OverzichtViewModel()
         {
@@ -51,6 +53,7 @@ namespace Lammers.ViewModel
             MeetmiddelView = new RelayCommand(setMeetmiddel);
             HefmiddelView = new RelayCommand(setHefmiddelen);
             CompressorView = new RelayCommand(setCompressor);
+            AlgemeenView = new RelayCommand(setAlgemeen);
 
             MessageBox.Show("Let op dat binnen dit systeem de Amerikaanse datum wordt gehanteerd, alle datums staan dus in dit format: maand/dag/jaar.\n" +
                 "Let dus goed op wanneer je een datum aanpast en/of leest!");
@@ -238,6 +241,11 @@ namespace Lammers.ViewModel
         private void setCompressor()
         {
             Navigator.SetNewView(new CompressorOverzichtView());
+        }
+
+        private void setAlgemeen()
+        {
+            Navigator.SetNewView(new AlgemeenOverzichtView());
         }
     }
 }

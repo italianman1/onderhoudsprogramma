@@ -25,6 +25,7 @@ namespace Lammers.Model
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<AlgemeenItem> AlgemeenItem { get; set; }
         public virtual DbSet<Bovenloopkraan> Bovenloopkraan { get; set; }
         public virtual DbSet<Compressor> Compressor { get; set; }
         public virtual DbSet<Hefmiddel> Hefmiddel { get; set; }

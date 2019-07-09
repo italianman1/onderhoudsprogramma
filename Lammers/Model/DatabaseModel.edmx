@@ -5,6 +5,19 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="Onderhoud_calibratieModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AlgemeenItem">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="leverancier" Type="varchar" MaxLength="50" />
+          <Property Name="bouwjaar" Type="int" />
+          <Property Name="benaming" Type="varchar" MaxLength="50" />
+          <Property Name="code_nr" Type="varchar" MaxLength="50" />
+          <Property Name="datum_gekeurd" Type="date" />
+          <Property Name="datum_herkeuring" Type="date" />
+          <Property Name="stamkaart" Type="varchar" MaxLength="150" />
+        </EntityType>
         <EntityType Name="Bovenloopkraan">
           <Key>
             <PropertyRef Name="Id" />
@@ -159,6 +172,7 @@
           <Property Name="stamkaart" Type="varchar" MaxLength="150" />
         </EntityType>
         <EntityContainer Name="Onderhoud_calibratieModelStoreContainer">
+          <EntitySet Name="AlgemeenItem" EntityType="Self.AlgemeenItem" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Bovenloopkraan" EntityType="Self.Bovenloopkraan" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Compressor" EntityType="Self.Compressor" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Hefmiddel" EntityType="Self.Hefmiddel" Schema="dbo" store:Type="Tables" />
@@ -175,6 +189,19 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Onderhoud_calibratieModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AlgemeenItem">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="leverancier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="bouwjaar" Type="Int32" />
+          <Property Name="benaming" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="code_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="datum_gekeurd" Type="DateTime" Precision="0" />
+          <Property Name="datum_herkeuring" Type="DateTime" Precision="0" />
+          <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
         <EntityType Name="Bovenloopkraan">
           <Key>
             <PropertyRef Name="Id" />
@@ -329,6 +356,7 @@
           <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityContainer Name="Onderhoud_calibratieEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AlgemeenItem" EntityType="Self.AlgemeenItem" />
           <EntitySet Name="Bovenloopkraan" EntityType="Self.Bovenloopkraan" />
           <EntitySet Name="Compressor" EntityType="Self.Compressor" />
           <EntitySet Name="Hefmiddel" EntityType="Self.Hefmiddel" />
@@ -346,6 +374,20 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="Onderhoud_calibratieModelStoreContainer" CdmEntityContainer="Onderhoud_calibratieEntities">
+          <EntitySetMapping Name="AlgemeenItem">
+            <EntityTypeMapping TypeName="Onderhoud_calibratieModel.AlgemeenItem">
+              <MappingFragment StoreEntitySet="AlgemeenItem">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="leverancier" ColumnName="leverancier" />
+                <ScalarProperty Name="bouwjaar" ColumnName="bouwjaar" />
+                <ScalarProperty Name="benaming" ColumnName="benaming" />
+                <ScalarProperty Name="code_nr" ColumnName="code_nr" />
+                <ScalarProperty Name="datum_gekeurd" ColumnName="datum_gekeurd" />
+                <ScalarProperty Name="datum_herkeuring" ColumnName="datum_herkeuring" />
+                <ScalarProperty Name="stamkaart" ColumnName="stamkaart" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Bovenloopkraan">
             <EntityTypeMapping TypeName="Onderhoud_calibratieModel.Bovenloopkraan">
               <MappingFragment StoreEntitySet="Bovenloopkraan">

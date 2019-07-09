@@ -588,3 +588,9 @@ C:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\obj\D
 C:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\obj\Debug\View\Compressoren\AddCompressorView.baml
 C:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\obj\Debug\View\Compressoren\EditCompressorView.baml
 C:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\obj\Debug\View\Compressoren\CompressorOverzichtView.baml
+C:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\obj\Debug\View\Algemeen\AddAlgemeenView.g.cs
+C:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\obj\Debug\View\Algemeen\AlgemeenOverzichtView.g.cs
+C:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\obj\Debug\View\Algemeen\EditAlgemeenView.g.cs
+C:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\obj\Debug\View\Algemeen\AddAlgemeenView.baml
+C:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\obj\Debug\View\Algemeen\AlgemeenOverzichtView.baml
+C:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\obj\Debug\View\Algemeen\EditAlgemeenView.baml
