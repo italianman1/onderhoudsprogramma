@@ -100,7 +100,7 @@ namespace Lammers.ViewModel.Opleggers
                 var searchedOpleggers = new List<Oplegger>();
 
                 foreach (var oplegger in _allOpleggers)
-                    if ((_searchString != null) && oplegger.benaming.ToLower().Contains(SearchString.ToLower()))
+                    if ((_searchString != null) && oplegger.kenteken.ToLower().Contains(SearchString.ToLower()))
                     {
                         searchedOpleggers.Add(oplegger);
                     }
