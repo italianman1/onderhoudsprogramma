@@ -504,7 +504,6 @@ C:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\bin\D
 C:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\bin\Debug\Microsoft.Practices.ServiceLocation.xml
 C:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\bin\Debug\System.Data.SQLite.xml
 C:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\bin\Debug\System.Data.SQLite.dll.config
-C:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\obj\Debug\Lammers.csprojResolveAssemblyReference.cache
 C:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\obj\Debug\View\Hefmiddelen\AddHefmiddelView.g.cs
 C:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\obj\Debug\View\Hefmiddelen\EditHefmiddelView.g.cs
 C:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\obj\Debug\View\Hefmiddelen\HefmiddelOverzichtView.g.cs

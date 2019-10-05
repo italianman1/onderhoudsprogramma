@@ -64,6 +64,7 @@ namespace Lammers.ViewModel.Algemeen
             AddAlgemeenCommand = new RelayCommand(openAddWindow);
             EditAlgemeenCommand = new RelayCommand(openEditWindow);
             OpenCertificateCommand = new RelayCommand(openCertificate);
+            OpenOHCertificateCommand = new RelayCommand(openOHCertificate);
             BackCommand = new RelayCommand(PerformBack);
         }
 
@@ -71,6 +72,7 @@ namespace Lammers.ViewModel.Algemeen
         public ICommand AddAlgemeenCommand { get; set; }
         public ICommand EditAlgemeenCommand { get; set; }
         public ICommand OpenCertificateCommand { get; set; }
+        public ICommand OpenOHCertificateCommand { get; set; }
         public ICommand BackCommand { get; set; }
 
         public List<AlgemeenItem> Algemeen
@@ -175,6 +177,21 @@ namespace Lammers.ViewModel.Algemeen
 
             else
                 MessageBox.Show("Selecteer alstublieft eerst een Algemeen waarvan u de stamkaart wilt openen");
+
+        }
+
+        public void openOHCertificate()
+        {
+
+            try
+            {
+                System.Diagnostics.Process.Start("M:\\Certificaten onderhoudsprogramma\\Algemeen\\Keuringsrapport overheaddeuren.pdf");
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
 
         }
 

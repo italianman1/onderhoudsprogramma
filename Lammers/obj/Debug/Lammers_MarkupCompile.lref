@@ -1,5 +1,11 @@
-﻿
+﻿C:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\obj\Debug\GeneratedInternalTypeHelper.g.cs
 FC:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\App.xaml;;
+FC:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\View\Algemeen\AddAlgemeenView.xaml;;
+FC:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\View\Algemeen\AlgemeenOverzichtView.xaml;;
+FC:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\View\Algemeen\EditAlgemeenView.xaml;;
+FC:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\View\Compressoren\AddCompressorView.xaml;;
+FC:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\View\Compressoren\EditCompressorView.xaml;;
+FC:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\View\Compressoren\CompressorOverzichtView.xaml;;
 FC:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\View\Hefmiddelen\AddHefmiddelView.xaml;;
 FC:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\View\Hefmiddelen\EditHefmiddelView.xaml;;
 FC:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\View\Hefmiddelen\HefmiddelOverzichtView.xaml;;
@@ -31,10 +37,4 @@ FC:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\View
 FC:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\View\Verfpompen\AddVerfpompView.xaml;;
 FC:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\View\Verfpompen\EditVerfpompView.xaml;;
 FC:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\View\Verfpompen\VerfpompOverzichtView.xaml;;
-FC:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\View\Compressoren\AddCompressorView.xaml;;
-FC:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\View\Compressoren\EditCompressorView.xaml;;
-FC:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\View\Compressoren\CompressorOverzichtView.xaml;;
-FC:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\View\Algemeen\AddAlgemeenView.xaml;;
-FC:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\View\Algemeen\AlgemeenOverzichtView.xaml;;
-FC:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\View\Algemeen\EditAlgemeenView.xaml;;
 
