@@ -103,14 +103,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Lammers.exe" size="509952">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Lammers.exe" size="510976">
       <assemblyIdentity name="Lammers" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>061gBlCvDmyq1F4EZDPHOZRD7S6R7miHORL9y2gINkc=</dsig:DigestValue>
+        <dsig:DigestValue>RwFwwhOZXsArM8Et7bEKUVPE507C1hVVy1+psMOFGNQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

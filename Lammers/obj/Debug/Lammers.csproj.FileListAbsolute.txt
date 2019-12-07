@@ -593,3 +593,4 @@ C:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\obj\D
 C:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\obj\Debug\View\Algemeen\AddAlgemeenView.baml
 C:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\obj\Debug\View\Algemeen\AlgemeenOverzichtView.baml
 C:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\obj\Debug\View\Algemeen\EditAlgemeenView.baml
+C:\Program Files\Onderhoudsprogramma\Programma\onderhoudsprogramma\Lammers\obj\Debug\Lammers.csprojResolveAssemblyReference.cache
