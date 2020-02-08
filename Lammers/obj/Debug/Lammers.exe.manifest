@@ -103,14 +103,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Lammers.exe" size="510976">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Lammers.exe" size="509952">
       <assemblyIdentity name="Lammers" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>RwFwwhOZXsArM8Et7bEKUVPE507C1hVVy1+psMOFGNQ=</dsig:DigestValue>
+        <dsig:DigestValue>fX8iq4jBMIkdhlY/9GdKgINcd7KJpvUPpj0RzdGT57c=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -186,13 +186,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Lammers.exe.config" size="2250">
+  <file name="Lammers.exe.config" size="2299">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>sUzrCeVOjgOzEKU5FgN0ZOO/kW7YWL12tRItUerHqXE=</dsig:DigestValue>
+      <dsig:DigestValue>8ZDR2GQNKUeiFFzVxhY+KeD5mXDPwUIWPBKL157M8LQ=</dsig:DigestValue>
     </hash>
   </file>
   <file name="lammers_constructie_mci_icon.ico" size="45975">
