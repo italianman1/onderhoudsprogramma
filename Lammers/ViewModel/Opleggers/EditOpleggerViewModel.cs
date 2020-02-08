@@ -53,6 +53,7 @@ namespace Lammers.ViewModel.Opleggers
             Herkeuringsdatum = (DateTime)selectedOplegger.datum_herkeuring;
             Leverancier = selectedOplegger.leverancier;
             Locatie = selectedOplegger.locatie;
+            Certificaat = selectedOplegger.stamkaart;
             SelectedStat = selectedOplegger.status;
             _stats = new List<string>();
             _stats.Add("Geschorst");

@@ -45,6 +45,7 @@ namespace Lammers.ViewModel.Valbeveiligingen
             _personen.Add("Jeffrey");
             _personen.Add("Jeroen van Deurzen");
             _personen.Add("Jelle Kwant");
+            _personen.Add("Henk (nieuwe monteur)");
             _personen.Add("Magazijn");
             _personen.Add("Onbekend");
 

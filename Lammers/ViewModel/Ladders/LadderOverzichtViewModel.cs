@@ -5,7 +5,9 @@ using Lammers.View;
 using Lammers.View.Ladders;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +21,7 @@ namespace Lammers.ViewModel.Ladders
        
         private List<Ladder> _allLadders;
         private List<Ladder> _Ladders;
+        private string _certificaat;
         private string _searchString = "Zoek hier op registratienummer";
 
         public LadderOverzichtViewModel()
@@ -58,12 +61,16 @@ namespace Lammers.ViewModel.Ladders
 
                     MessageBox.Show("Deze Ladders moeten allemaal gekeurd worden: " + Environment.NewLine + message);
                 }
+
+                Certificaat = File.ReadAllText("../../ViewModel/Ladders/Testresultaten.txt");
             }
 
             DeleteLadderCommand = new RelayCommand(deleteLadder, canDelete);
             AddLadderCommand = new RelayCommand(openAddWindow);
             EditLadderCommand = new RelayCommand(openEditWindow);
             OpenCertificateCommand = new RelayCommand(openCertificate);
+            ChangeCertificateCommand = new RelayCommand(changeCertificate);
+            OpenIndividualCertificateCommand = new RelayCommand(openIndividualCertificate);
             BackCommand = new RelayCommand(PerformBack);
         }
 
@@ -71,6 +78,8 @@ namespace Lammers.ViewModel.Ladders
         public ICommand AddLadderCommand { get; set; }
         public ICommand EditLadderCommand { get; set; }
         public ICommand OpenCertificateCommand { get; set; }
+        public ICommand ChangeCertificateCommand { get; set; }
+        public ICommand OpenIndividualCertificateCommand { get; set; }
         public ICommand BackCommand { get; set; }
 
         public List<Ladder> Ladders
@@ -84,6 +93,20 @@ namespace Lammers.ViewModel.Ladders
             {
                 _Ladders = value;
                 RaisePropertyChanged("Ladders");
+            }
+        }
+
+        public String Certificaat
+        {
+            get
+            {
+                return _certificaat;
+            }
+
+            set
+            {
+                _certificaat = value;
+                RaisePropertyChanged("Certificaat");
             }
         }
 
@@ -119,8 +142,8 @@ namespace Lammers.ViewModel.Ladders
             if (SelectedLadder != null)
             {
 
-                MessageBoxResult dialogResult = MessageBox.Show("Weet u zeker dat u deze ladder wilt verwijderen?", "Verwijder " + SelectedLadder.benaming, MessageBoxButton.YesNo);
-                if (dialogResult == MessageBoxResult.Yes)
+                System.Windows.MessageBoxResult dialogResult = MessageBox.Show("Weet u zeker dat u deze ladder wilt verwijderen?", "Verwijder " + SelectedLadder.benaming, System.Windows.MessageBoxButton.YesNo);
+                if (dialogResult == System.Windows.MessageBoxResult.Yes)
                 {
                     using (var context = new Onderhoud_calibratieEntities())
                     {
@@ -153,7 +176,7 @@ namespace Lammers.ViewModel.Ladders
 
             try
             {
-                System.Diagnostics.Process.Start("M:\\Certificaten onderhoudsprogramma\\Ladders\\Testresultaten.pdf");
+                System.Diagnostics.Process.Start(Certificaat);
             }
 
             catch (Exception e)
@@ -161,6 +184,58 @@ namespace Lammers.ViewModel.Ladders
                 MessageBox.Show(e.Message);
             }
 
+        }
+
+        public void changeCertificate()
+        {
+    
+            Stream myStream = null;
+            System.Windows.Forms.OpenFileDialog openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            openFileDialog1.InitialDirectory = "c:\\";
+
+            openFileDialog1.Filter = "All files (*.*)|*.*|word files (*.docx)|*.docx|(*.doc)|*.doc"; ;
+            openFileDialog1.FilterIndex = 1;
+            openFileDialog1.RestoreDirectory = true;
+
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                try
+                {
+                    if ((myStream = openFileDialog1.OpenFile()) != null)
+                    {
+                        FileInfo fInfo = new FileInfo(openFileDialog1.FileName);
+                        string strFilePath = fInfo.FullName;
+                        File.WriteAllText("../../ViewModel/Ladders/Testresultaten.txt", strFilePath);
+                        Certificaat = File.ReadAllText("../../ViewModel/Ladders/Testresultaten.txt");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    System.Windows.MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
+                }
+            }
+
+        }
+
+        public void openIndividualCertificate()
+        {
+            if (SelectedLadder != null)
+                if (SelectedLadder.stamkaart == null)
+                    MessageBox.Show("Deze ladder heeft geen bijgevoegde stamkaart");
+
+                else
+                    try
+                    {
+                        System.Diagnostics.Process.Start(SelectedLadder.stamkaart);
+                    }
+
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(e.Message);
+                    }
+
+            else
+                MessageBox.Show("Selecteer alstublieft eerst een ladder waarvan u de stamkaart wilt openen");
         }
 
         public void updateLists()
