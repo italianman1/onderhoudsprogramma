@@ -268,6 +268,7 @@ namespace Lammers.ViewModel.Opleggers
                             locatie = Locatie,
                             stamkaart = Certificaat,
                             status = SelectedStat,
+                            datum_laatst_aangepast = DateTime.Now
                         };
 
                         context.Oplegger.Add(newOplegger);

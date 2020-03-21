@@ -564,6 +564,7 @@
   <ItemGroup>
     <Resource Include="ViewModel\Ladders\Testresultaten.txt" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Model\DatabaseModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

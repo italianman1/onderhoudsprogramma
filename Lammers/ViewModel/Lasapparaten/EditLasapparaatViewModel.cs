@@ -298,6 +298,7 @@ namespace Lammers.ViewModel.Lasapparaten
                                 lasapparaat.locatie = SelectedLocatie;
                                 lasapparaat.stamkaart = Certificaat;
                                 lasapparaat.stevens = Stevens;
+                                lasapparaat.datum_laatst_aangepast = DateTime.Now;
                             }
                         }
                       

@@ -28,6 +28,7 @@
                 <DataGridTextColumn Header="datum gekeurd" Binding="{Binding datum_gekeurd}" Width="*"   />
                 <DataGridTextColumn Header="datum herkeuring" Binding="{Binding datum_herkeuring}" Width="*"   />
                 <DataGridTextColumn Header="Bouwjaar" Binding="{Binding bouwjaar}" Width="*"   />
+                <DataGridTextColumn Header="Datum laatst aangepast" Binding="{Binding datum_laatst_aangepast}" Width="200"   />
 
             </DataGrid.Columns>
 

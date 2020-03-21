@@ -25,7 +25,7 @@ namespace Lammers.ViewModel.Opleggers
         {
             List<Oplegger> searchedOpleggers;
 
-            using (var context = new Onderhoud_calibratieEntities())
+            using (Onderhoud_calibratieEntities context = new Onderhoud_calibratieEntities())
             {
                 var opleggers = context.Oplegger.ToList();
 

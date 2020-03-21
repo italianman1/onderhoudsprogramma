@@ -237,7 +237,8 @@ namespace Lammers.ViewModel.Ladders
                             datum_gekeurd = Keuringdatum,
                             datum_herkeuring = Herkeuringsdatum,
                             merk = Merk,
-                            stamkaart = Certificaat
+                            stamkaart = Certificaat,
+                            datum_laatst_aangepast = DateTime.Now
                         };
 
                         context.Ladder.Add(newladder);

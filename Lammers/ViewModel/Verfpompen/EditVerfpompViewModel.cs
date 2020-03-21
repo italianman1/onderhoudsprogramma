@@ -237,6 +237,7 @@ namespace Lammers.ViewModel.Verfpompen
                                 pomp.datum_herkeuring = Herkeuringsdatum;
                                 pomp.merk = Merk;
                                 pomp.stamkaart = Certificaat;
+                                pomp.datum_laatst_aangepast = DateTime.Now;
                             }
                         }
 

@@ -256,6 +256,7 @@ namespace Lammers.ViewModel.Valbeveiligingen
                             datum_herkeuring = Herkeuringsdatum,
                             persoon = SelectedPersoon,
                             certificaat = Certificaat,
+                            datum_laatst_aangepast = DateTime.Now
                         };
 
                         context.Valbeveiliging.Add(newValbeveiliging);

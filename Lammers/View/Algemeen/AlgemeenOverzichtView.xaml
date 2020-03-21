@@ -20,7 +20,7 @@
 
         <DataGrid x:Name="Grid" AutoGenerateColumns="False" CanUserDeleteRows="False"
                       SelectedItem="{Binding SelectedAlgemeen, Mode=TwoWay}" IsReadOnly="True"
-                      ItemsSource="{Binding Algemeen, UpdateSourceTrigger = PropertyChanged}" Margin="11,102,1,32"
+                      ItemsSource="{Binding Algemeen, UpdateSourceTrigger = PropertyChanged}" Margin="11,102,10,32"
                       BorderBrush="#FF979494" GridLinesVisibility="Horizontal" HorizontalGridLinesBrush="#FFF0E0E0"
                       HeadersVisibility="Column">
             <DataGrid.Columns>
@@ -32,7 +32,7 @@
                 <DataGridTextColumn Header="Code nummer" Binding="{Binding code_nr }" Width="*"   />
                 <DataGridTextColumn Header="Datum gekeurd" Binding="{Binding datum_gekeurd}" Width="*"   />
                 <DataGridTextColumn Header="Datum herkeuring" Binding="{Binding datum_herkeuring}" Width="*"   />
-
+                <DataGridTextColumn Header="Datum laatst aangepast" Binding="{Binding datum_laatst_aangepast}" Width="200"   />
             </DataGrid.Columns>
 
             <DataGrid.ColumnHeaderStyle>

@@ -27,6 +27,7 @@
                 <DataGridTextColumn Header="LAM_nr" Binding="{Binding LAM_nr}" Width="*"   />
                 <DataGridTextColumn Header="Code_nr" Binding="{Binding code_nr}" Width="*"   />
                 <DataGridTextColumn Header="Locatie" Binding="{Binding locatie}" Width="*"   />
+                <DataGridTextColumn Header="Datum laatst aangepast" Binding="{Binding datum_laatst_aangepast}" Width="200"   />
 
             </DataGrid.Columns>
 

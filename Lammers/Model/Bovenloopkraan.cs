@@ -27,5 +27,6 @@ namespace Lammers.Model
         public string fabrieks_nr { get; set; }
         public string hijsvermogen { get; set; }
         public Nullable<bool> stevens { get; set; }
+        public Nullable<System.DateTime> datum_laatst_aangepast { get; set; }
     }
 }

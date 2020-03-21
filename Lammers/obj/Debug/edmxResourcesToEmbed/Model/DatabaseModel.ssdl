@@ -12,6 +12,7 @@
     <Property Name="datum_gekeurd" Type="date" />
     <Property Name="datum_herkeuring" Type="date" />
     <Property Name="stamkaart" Type="varchar" MaxLength="150" />
+    <Property Name="datum_laatst_aangepast" Type="date" />
   </EntityType>
   <EntityType Name="Bovenloopkraan">
     <Key>
@@ -30,6 +31,7 @@
     <Property Name="fabrieks_nr" Type="varchar" MaxLength="50" />
     <Property Name="hijsvermogen" Type="varchar" MaxLength="50" />
     <Property Name="stevens" Type="bit" />
+    <Property Name="datum_laatst_aangepast" Type="date" />
   </EntityType>
   <EntityType Name="Compressor">
     <Key>
@@ -46,6 +48,7 @@
     <Property Name="serie_nr" Type="varchar" MaxLength="50" />
     <Property Name="benaming" Type="varchar" MaxLength="50" />
     <Property Name="stamkaart" Type="varchar" MaxLength="150" />
+    <Property Name="datum_laatst_aangepast" Type="date" />
   </EntityType>
   <EntityType Name="Hefmiddel">
     <Key>
@@ -61,6 +64,7 @@
     <Property Name="merk" Type="varchar" MaxLength="50" />
     <Property Name="benaming" Type="varchar" MaxLength="50" />
     <Property Name="stamkaart" Type="varchar" MaxLength="150" />
+    <Property Name="datum_laatst_aangepast" Type="datetime" />
   </EntityType>
   <EntityType Name="Hijsmiddel">
     <Key>
@@ -75,6 +79,7 @@
     <Property Name="status" Type="varchar" MaxLength="50" />
     <Property Name="certificaat" Type="varchar" MaxLength="150" />
     <Property Name="stevens" Type="bit" />
+    <Property Name="datum_laatst_aangepast" Type="datetime" />
   </EntityType>
   <EntityType Name="Ladder">
     <Key>
@@ -90,6 +95,7 @@
     <Property Name="merk" Type="varchar" MaxLength="50" />
     <Property Name="benaming" Type="varchar" MaxLength="50" />
     <Property Name="stamkaart" Type="varchar" MaxLength="150" />
+    <Property Name="datum_laatst_aangepast" Type="datetime" />
   </EntityType>
   <EntityType Name="Lasapparaat">
     <Key>
@@ -107,6 +113,7 @@
     <Property Name="bouwjaar" Type="int" />
     <Property Name="stamkaart" Type="varchar" MaxLength="150" />
     <Property Name="stevens" Type="bit" />
+    <Property Name="datum_laatst_aangepast" Type="datetime" />
   </EntityType>
   <EntityType Name="Meetmiddel">
     <Key>
@@ -121,6 +128,7 @@
     <Property Name="merk" Type="varchar" MaxLength="50" />
     <Property Name="benaming" Type="varchar" MaxLength="50" />
     <Property Name="stamkaart" Type="varchar" MaxLength="150" />
+    <Property Name="datum_laatst_aangepast" Type="datetime" />
   </EntityType>
   <EntityType Name="Oplegger">
     <Key>
@@ -137,6 +145,7 @@
     <Property Name="stamkaart" Type="varchar" MaxLength="150" />
     <Property Name="benaming" Type="varchar" MaxLength="50" />
     <Property Name="status" Type="varchar" MaxLength="50" />
+    <Property Name="datum_laatst_aangepast" Type="datetime" />
   </EntityType>
   <EntityType Name="Valbeveiliging">
     <Key>
@@ -151,6 +160,7 @@
     <Property Name="datum_herkeuring" Type="date" />
     <Property Name="persoon" Type="varchar" MaxLength="50" />
     <Property Name="certificaat" Type="varchar" MaxLength="150" />
+    <Property Name="datum_laatst_aangepast" Type="datetime" />
   </EntityType>
   <EntityType Name="Verfpomp">
     <Key>
@@ -165,6 +175,7 @@
     <Property Name="merk" Type="varchar" MaxLength="50" />
     <Property Name="benaming" Type="varchar" MaxLength="50" />
     <Property Name="stamkaart" Type="varchar" MaxLength="150" />
+    <Property Name="datum_laatst_aangepast" Type="datetime" />
   </EntityType>
   <EntityContainer Name="Onderhoud_calibratieModelStoreContainer">
     <EntitySet Name="AlgemeenItem" EntityType="Self.AlgemeenItem" Schema="dbo" store:Type="Tables" />

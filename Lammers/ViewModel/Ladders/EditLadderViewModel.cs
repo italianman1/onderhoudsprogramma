@@ -259,6 +259,7 @@ namespace Lammers.ViewModel.Ladders
                                 ladder.datum_herkeuring = Herkeuringsdatum;
                                 ladder.merk = Merk;
                                 ladder.stamkaart = Certificaat;
+                                ladder.datum_laatst_aangepast = DateTime.Now;
                             }
                         }
 

@@ -272,7 +272,8 @@ namespace Lammers.ViewModel.Lasapparaten
                             bouwjaar = Bouwjaar,
                             locatie = SelectedLocatie,
                             stamkaart = Certificaat,
-                            stevens = Stevens
+                            stevens = Stevens,
+                            datum_laatst_aangepast = DateTime.Now
                         };
 
                         context.Lasapparaat.Add(newLasapparaat);

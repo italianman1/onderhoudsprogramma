@@ -12,6 +12,7 @@
     <Property Name="datum_gekeurd" Type="DateTime" Precision="0" />
     <Property Name="datum_herkeuring" Type="DateTime" Precision="0" />
     <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="datum_laatst_aangepast" Type="DateTime" Precision="0" />
   </EntityType>
   <EntityType Name="Bovenloopkraan">
     <Key>
@@ -30,6 +31,7 @@
     <Property Name="fabrieks_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="hijsvermogen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="stevens" Type="Boolean" />
+    <Property Name="datum_laatst_aangepast" Type="DateTime" Precision="0" />
   </EntityType>
   <EntityType Name="Compressor">
     <Key>
@@ -46,6 +48,7 @@
     <Property Name="serie_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="benaming" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="datum_laatst_aangepast" Type="DateTime" Precision="0" />
   </EntityType>
   <EntityType Name="Hefmiddel">
     <Key>
@@ -61,6 +64,7 @@
     <Property Name="merk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="benaming" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="datum_laatst_aangepast" Type="DateTime" Precision="3" />
   </EntityType>
   <EntityType Name="Hijsmiddel">
     <Key>
@@ -75,6 +79,7 @@
     <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="certificaat" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
     <Property Name="stevens" Type="Boolean" />
+    <Property Name="datum_laatst_aangepast" Type="DateTime" Precision="3" />
   </EntityType>
   <EntityType Name="Ladder">
     <Key>
@@ -90,6 +95,7 @@
     <Property Name="merk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="benaming" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="datum_laatst_aangepast" Type="DateTime" Precision="3" />
   </EntityType>
   <EntityType Name="Lasapparaat">
     <Key>
@@ -107,6 +113,7 @@
     <Property Name="bouwjaar" Type="Int32" />
     <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
     <Property Name="stevens" Type="Boolean" />
+    <Property Name="datum_laatst_aangepast" Type="DateTime" Precision="3" />
   </EntityType>
   <EntityType Name="Meetmiddel">
     <Key>
@@ -121,6 +128,7 @@
     <Property Name="merk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="benaming" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="datum_laatst_aangepast" Type="DateTime" Precision="3" />
   </EntityType>
   <EntityType Name="Oplegger">
     <Key>
@@ -137,6 +145,7 @@
     <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
     <Property Name="benaming" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="datum_laatst_aangepast" Type="DateTime" Precision="3" />
   </EntityType>
   <EntityType Name="Valbeveiliging">
     <Key>
@@ -151,6 +160,7 @@
     <Property Name="datum_herkeuring" Type="DateTime" Precision="0" />
     <Property Name="persoon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="certificaat" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="datum_laatst_aangepast" Type="DateTime" Precision="3" />
   </EntityType>
   <EntityType Name="Verfpomp">
     <Key>
@@ -165,6 +175,7 @@
     <Property Name="merk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="benaming" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="datum_laatst_aangepast" Type="DateTime" Precision="3" />
   </EntityType>
   <EntityContainer Name="Onderhoud_calibratieEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="AlgemeenItem" EntityType="Self.AlgemeenItem" />

@@ -253,7 +253,8 @@ namespace Lammers.ViewModel.Compressoren
                             datum_herkeuring = Herkeuringsdatum,
                             merk = Merk,
                             type = Type,
-                            stamkaart = Certificaat
+                            stamkaart = Certificaat,
+                            datum_laatst_aangepast = DateTime.Now
                         };
 
                         context.Compressor.Add(newCompressor);

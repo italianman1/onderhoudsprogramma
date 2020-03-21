@@ -23,5 +23,6 @@ namespace Lammers.Model
         public Nullable<System.DateTime> datum_herkeuring { get; set; }
         public string persoon { get; set; }
         public string certificaat { get; set; }
+        public Nullable<System.DateTime> datum_laatst_aangepast { get; set; }
     }
 }

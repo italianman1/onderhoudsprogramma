@@ -12,6 +12,7 @@
           <ScalarProperty Name="datum_gekeurd" ColumnName="datum_gekeurd" />
           <ScalarProperty Name="datum_herkeuring" ColumnName="datum_herkeuring" />
           <ScalarProperty Name="stamkaart" ColumnName="stamkaart" />
+          <ScalarProperty Name="datum_laatst_aangepast" ColumnName="datum_laatst_aangepast" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -31,6 +32,7 @@
           <ScalarProperty Name="fabrieks_nr" ColumnName="fabrieks_nr" />
           <ScalarProperty Name="hijsvermogen" ColumnName="hijsvermogen" />
           <ScalarProperty Name="stevens" ColumnName="stevens" />
+          <ScalarProperty Name="datum_laatst_aangepast" ColumnName="datum_laatst_aangepast" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -48,6 +50,7 @@
           <ScalarProperty Name="serie_nr" ColumnName="serie_nr" />
           <ScalarProperty Name="benaming" ColumnName="benaming" />
           <ScalarProperty Name="stamkaart" ColumnName="stamkaart" />
+          <ScalarProperty Name="datum_laatst_aangepast" ColumnName="datum_laatst_aangepast" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -64,6 +67,7 @@
           <ScalarProperty Name="merk" ColumnName="merk" />
           <ScalarProperty Name="benaming" ColumnName="benaming" />
           <ScalarProperty Name="stamkaart" ColumnName="stamkaart" />
+          <ScalarProperty Name="datum_laatst_aangepast" ColumnName="datum_laatst_aangepast" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -79,6 +83,7 @@
           <ScalarProperty Name="status" ColumnName="status" />
           <ScalarProperty Name="certificaat" ColumnName="certificaat" />
           <ScalarProperty Name="stevens" ColumnName="stevens" />
+          <ScalarProperty Name="datum_laatst_aangepast" ColumnName="datum_laatst_aangepast" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -95,6 +100,7 @@
           <ScalarProperty Name="merk" ColumnName="merk" />
           <ScalarProperty Name="benaming" ColumnName="benaming" />
           <ScalarProperty Name="stamkaart" ColumnName="stamkaart" />
+          <ScalarProperty Name="datum_laatst_aangepast" ColumnName="datum_laatst_aangepast" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -113,6 +119,7 @@
           <ScalarProperty Name="bouwjaar" ColumnName="bouwjaar" />
           <ScalarProperty Name="stamkaart" ColumnName="stamkaart" />
           <ScalarProperty Name="stevens" ColumnName="stevens" />
+          <ScalarProperty Name="datum_laatst_aangepast" ColumnName="datum_laatst_aangepast" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -128,6 +135,7 @@
           <ScalarProperty Name="merk" ColumnName="merk" />
           <ScalarProperty Name="benaming" ColumnName="benaming" />
           <ScalarProperty Name="stamkaart" ColumnName="stamkaart" />
+          <ScalarProperty Name="datum_laatst_aangepast" ColumnName="datum_laatst_aangepast" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -145,6 +153,7 @@
           <ScalarProperty Name="stamkaart" ColumnName="stamkaart" />
           <ScalarProperty Name="benaming" ColumnName="benaming" />
           <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="datum_laatst_aangepast" ColumnName="datum_laatst_aangepast" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -160,6 +169,7 @@
           <ScalarProperty Name="datum_herkeuring" ColumnName="datum_herkeuring" />
           <ScalarProperty Name="persoon" ColumnName="persoon" />
           <ScalarProperty Name="certificaat" ColumnName="certificaat" />
+          <ScalarProperty Name="datum_laatst_aangepast" ColumnName="datum_laatst_aangepast" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -175,6 +185,7 @@
           <ScalarProperty Name="merk" ColumnName="merk" />
           <ScalarProperty Name="benaming" ColumnName="benaming" />
           <ScalarProperty Name="stamkaart" ColumnName="stamkaart" />
+          <ScalarProperty Name="datum_laatst_aangepast" ColumnName="datum_laatst_aangepast" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

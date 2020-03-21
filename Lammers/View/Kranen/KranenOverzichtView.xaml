@@ -25,7 +25,8 @@
                 <DataGridTextColumn Header="Hijsvermogen" Binding="{Binding hijsvermogen}" Width="*"   />
                 <DataGridTextColumn Header="Codenummer" Binding="{Binding code_nr}"  Width="*"   />
                 <DataGridTextColumn Header="Datum gekeurd" Binding="{Binding datum_gekeurd}"  Width="*" />
-                <DataGridTextColumn Header="Datum herkeuring" Binding="{Binding datum_herkeuring}" Width="350"   />
+                <DataGridTextColumn Header="Datum herkeuring" Binding="{Binding datum_herkeuring}" Width="*"   />
+                <DataGridTextColumn Header="Datum laatst aangepast" Binding="{Binding datum_laatst_aangepast}" Width="200"   />
 
 
             </DataGrid.Columns>

@@ -315,6 +315,7 @@ namespace Lammers.ViewModel.Kranen
                             hijsvermogen = Hijsvermogen,
                             stamkaart = Certificaat,
                             stevens = Stevens,
+                            datum_laatst_aangepast = DateTime.Now
 
                         };
 

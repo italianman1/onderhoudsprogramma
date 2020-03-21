@@ -274,6 +274,7 @@ namespace Lammers.ViewModel.Compressoren
                                 Compressor.merk = Merk;
                                 Compressor.type = Type;
                                 Compressor.stamkaart = Certificaat;
+                                Compressor.datum_laatst_aangepast = DateTime.Now;
                             }
                         }
 

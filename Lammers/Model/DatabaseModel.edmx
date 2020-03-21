@@ -17,6 +17,7 @@
           <Property Name="datum_gekeurd" Type="date" />
           <Property Name="datum_herkeuring" Type="date" />
           <Property Name="stamkaart" Type="varchar" MaxLength="150" />
+          <Property Name="datum_laatst_aangepast" Type="date" />
         </EntityType>
         <EntityType Name="Bovenloopkraan">
           <Key>
@@ -35,6 +36,7 @@
           <Property Name="fabrieks_nr" Type="varchar" MaxLength="50" />
           <Property Name="hijsvermogen" Type="varchar" MaxLength="50" />
           <Property Name="stevens" Type="bit" />
+          <Property Name="datum_laatst_aangepast" Type="date" />
         </EntityType>
         <EntityType Name="Compressor">
           <Key>
@@ -51,6 +53,7 @@
           <Property Name="serie_nr" Type="varchar" MaxLength="50" />
           <Property Name="benaming" Type="varchar" MaxLength="50" />
           <Property Name="stamkaart" Type="varchar" MaxLength="150" />
+          <Property Name="datum_laatst_aangepast" Type="date" />
         </EntityType>
         <EntityType Name="Hefmiddel">
           <Key>
@@ -66,6 +69,7 @@
           <Property Name="merk" Type="varchar" MaxLength="50" />
           <Property Name="benaming" Type="varchar" MaxLength="50" />
           <Property Name="stamkaart" Type="varchar" MaxLength="150" />
+          <Property Name="datum_laatst_aangepast" Type="datetime" />
         </EntityType>
         <EntityType Name="Hijsmiddel">
           <Key>
@@ -80,6 +84,7 @@
           <Property Name="status" Type="varchar" MaxLength="50" />
           <Property Name="certificaat" Type="varchar" MaxLength="150" />
           <Property Name="stevens" Type="bit" />
+          <Property Name="datum_laatst_aangepast" Type="datetime" />
         </EntityType>
         <EntityType Name="Ladder">
           <Key>
@@ -95,6 +100,7 @@
           <Property Name="merk" Type="varchar" MaxLength="50" />
           <Property Name="benaming" Type="varchar" MaxLength="50" />
           <Property Name="stamkaart" Type="varchar" MaxLength="150" />
+          <Property Name="datum_laatst_aangepast" Type="datetime" />
         </EntityType>
         <EntityType Name="Lasapparaat">
           <Key>
@@ -112,6 +118,7 @@
           <Property Name="bouwjaar" Type="int" />
           <Property Name="stamkaart" Type="varchar" MaxLength="150" />
           <Property Name="stevens" Type="bit" />
+          <Property Name="datum_laatst_aangepast" Type="datetime" />
         </EntityType>
         <EntityType Name="Meetmiddel">
           <Key>
@@ -126,6 +133,7 @@
           <Property Name="merk" Type="varchar" MaxLength="50" />
           <Property Name="benaming" Type="varchar" MaxLength="50" />
           <Property Name="stamkaart" Type="varchar" MaxLength="150" />
+          <Property Name="datum_laatst_aangepast" Type="datetime" />
         </EntityType>
         <EntityType Name="Oplegger">
           <Key>
@@ -142,6 +150,7 @@
           <Property Name="stamkaart" Type="varchar" MaxLength="150" />
           <Property Name="benaming" Type="varchar" MaxLength="50" />
           <Property Name="status" Type="varchar" MaxLength="50" />
+          <Property Name="datum_laatst_aangepast" Type="datetime" />
         </EntityType>
         <EntityType Name="Valbeveiliging">
           <Key>
@@ -156,6 +165,7 @@
           <Property Name="datum_herkeuring" Type="date" />
           <Property Name="persoon" Type="varchar" MaxLength="50" />
           <Property Name="certificaat" Type="varchar" MaxLength="150" />
+          <Property Name="datum_laatst_aangepast" Type="datetime" />
         </EntityType>
         <EntityType Name="Verfpomp">
           <Key>
@@ -170,6 +180,7 @@
           <Property Name="merk" Type="varchar" MaxLength="50" />
           <Property Name="benaming" Type="varchar" MaxLength="50" />
           <Property Name="stamkaart" Type="varchar" MaxLength="150" />
+          <Property Name="datum_laatst_aangepast" Type="datetime" />
         </EntityType>
         <EntityContainer Name="Onderhoud_calibratieModelStoreContainer">
           <EntitySet Name="AlgemeenItem" EntityType="Self.AlgemeenItem" Schema="dbo" store:Type="Tables" />
@@ -201,6 +212,7 @@
           <Property Name="datum_gekeurd" Type="DateTime" Precision="0" />
           <Property Name="datum_herkeuring" Type="DateTime" Precision="0" />
           <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="datum_laatst_aangepast" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="Bovenloopkraan">
           <Key>
@@ -219,6 +231,7 @@
           <Property Name="fabrieks_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="hijsvermogen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="stevens" Type="Boolean" />
+          <Property Name="datum_laatst_aangepast" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="Compressor">
           <Key>
@@ -235,6 +248,7 @@
           <Property Name="serie_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="benaming" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="datum_laatst_aangepast" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="Hefmiddel">
           <Key>
@@ -250,6 +264,7 @@
           <Property Name="merk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="benaming" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="datum_laatst_aangepast" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="Hijsmiddel">
           <Key>
@@ -264,6 +279,7 @@
           <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="certificaat" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Name="stevens" Type="Boolean" />
+          <Property Name="datum_laatst_aangepast" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="Ladder">
           <Key>
@@ -279,6 +295,7 @@
           <Property Name="merk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="benaming" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="datum_laatst_aangepast" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="Lasapparaat">
           <Key>
@@ -296,6 +313,7 @@
           <Property Name="bouwjaar" Type="Int32" />
           <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Name="stevens" Type="Boolean" />
+          <Property Name="datum_laatst_aangepast" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="Meetmiddel">
           <Key>
@@ -310,6 +328,7 @@
           <Property Name="merk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="benaming" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="datum_laatst_aangepast" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="Oplegger">
           <Key>
@@ -326,6 +345,7 @@
           <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Name="benaming" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="datum_laatst_aangepast" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="Valbeveiliging">
           <Key>
@@ -340,6 +360,7 @@
           <Property Name="datum_herkeuring" Type="DateTime" Precision="0" />
           <Property Name="persoon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="certificaat" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="datum_laatst_aangepast" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="Verfpomp">
           <Key>
@@ -354,6 +375,7 @@
           <Property Name="merk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="benaming" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="stamkaart" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="datum_laatst_aangepast" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityContainer Name="Onderhoud_calibratieEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="AlgemeenItem" EntityType="Self.AlgemeenItem" />
@@ -385,6 +407,7 @@
                 <ScalarProperty Name="datum_gekeurd" ColumnName="datum_gekeurd" />
                 <ScalarProperty Name="datum_herkeuring" ColumnName="datum_herkeuring" />
                 <ScalarProperty Name="stamkaart" ColumnName="stamkaart" />
+                <ScalarProperty Name="datum_laatst_aangepast" ColumnName="datum_laatst_aangepast" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -404,6 +427,7 @@
                 <ScalarProperty Name="fabrieks_nr" ColumnName="fabrieks_nr" />
                 <ScalarProperty Name="hijsvermogen" ColumnName="hijsvermogen" />
                 <ScalarProperty Name="stevens" ColumnName="stevens" />
+                <ScalarProperty Name="datum_laatst_aangepast" ColumnName="datum_laatst_aangepast" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -421,6 +445,7 @@
                 <ScalarProperty Name="serie_nr" ColumnName="serie_nr" />
                 <ScalarProperty Name="benaming" ColumnName="benaming" />
                 <ScalarProperty Name="stamkaart" ColumnName="stamkaart" />
+                <ScalarProperty Name="datum_laatst_aangepast" ColumnName="datum_laatst_aangepast" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -437,6 +462,7 @@
                 <ScalarProperty Name="merk" ColumnName="merk" />
                 <ScalarProperty Name="benaming" ColumnName="benaming" />
                 <ScalarProperty Name="stamkaart" ColumnName="stamkaart" />
+                <ScalarProperty Name="datum_laatst_aangepast" ColumnName="datum_laatst_aangepast" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -452,6 +478,7 @@
                 <ScalarProperty Name="status" ColumnName="status" />
                 <ScalarProperty Name="certificaat" ColumnName="certificaat" />
                 <ScalarProperty Name="stevens" ColumnName="stevens" />
+                <ScalarProperty Name="datum_laatst_aangepast" ColumnName="datum_laatst_aangepast" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -468,6 +495,7 @@
                 <ScalarProperty Name="merk" ColumnName="merk" />
                 <ScalarProperty Name="benaming" ColumnName="benaming" />
                 <ScalarProperty Name="stamkaart" ColumnName="stamkaart" />
+                <ScalarProperty Name="datum_laatst_aangepast" ColumnName="datum_laatst_aangepast" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -486,6 +514,7 @@
                 <ScalarProperty Name="bouwjaar" ColumnName="bouwjaar" />
                 <ScalarProperty Name="stamkaart" ColumnName="stamkaart" />
                 <ScalarProperty Name="stevens" ColumnName="stevens" />
+                <ScalarProperty Name="datum_laatst_aangepast" ColumnName="datum_laatst_aangepast" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -501,6 +530,7 @@
                 <ScalarProperty Name="merk" ColumnName="merk" />
                 <ScalarProperty Name="benaming" ColumnName="benaming" />
                 <ScalarProperty Name="stamkaart" ColumnName="stamkaart" />
+                <ScalarProperty Name="datum_laatst_aangepast" ColumnName="datum_laatst_aangepast" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -518,6 +548,7 @@
                 <ScalarProperty Name="stamkaart" ColumnName="stamkaart" />
                 <ScalarProperty Name="benaming" ColumnName="benaming" />
                 <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="datum_laatst_aangepast" ColumnName="datum_laatst_aangepast" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -533,6 +564,7 @@
                 <ScalarProperty Name="datum_herkeuring" ColumnName="datum_herkeuring" />
                 <ScalarProperty Name="persoon" ColumnName="persoon" />
                 <ScalarProperty Name="certificaat" ColumnName="certificaat" />
+                <ScalarProperty Name="datum_laatst_aangepast" ColumnName="datum_laatst_aangepast" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -548,6 +580,7 @@
                 <ScalarProperty Name="merk" ColumnName="merk" />
                 <ScalarProperty Name="benaming" ColumnName="benaming" />
                 <ScalarProperty Name="stamkaart" ColumnName="stamkaart" />
+                <ScalarProperty Name="datum_laatst_aangepast" ColumnName="datum_laatst_aangepast" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -26,8 +26,9 @@
                 <DataGridTextColumn Header="Bouwjaar" Binding="{Binding bouwjaar}" Width="*"   />
                 <DataGridTextColumn Header="Status" Binding="{Binding status}" Width="*"   />
                 <DataGridTextColumn Header="Datum gekeurd" Binding="{Binding datum_gekeurd}"  Width="*" />
-                <DataGridTextColumn Header="Datum herkeuring" Binding="{Binding datum_herkeuring}" Width="*"   />
+                <DataGridTextColumn Header="Datum herkeuring" Binding="{Binding datum_herkeuring}" Width="150"   />
                 <DataGridTextColumn Header="Stamkaart" Binding="{Binding stamkaart}" Width="*"   />
+                <DataGridTextColumn Header="Datum laatst aangepast" Binding="{Binding datum_laatst_aangepast}" Width="200"   />
 
 
             </DataGrid.Columns>

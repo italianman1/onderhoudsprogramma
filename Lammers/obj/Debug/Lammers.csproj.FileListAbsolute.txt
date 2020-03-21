@@ -622,7 +622,6 @@ M:\Onderhoudsprogramma\onderhoudsprogramma\Lammers\bin\Debug\Microsoft.Practices
 M:\Onderhoudsprogramma\onderhoudsprogramma\Lammers\bin\Debug\Microsoft.Practices.ServiceLocation.xml
 M:\Onderhoudsprogramma\onderhoudsprogramma\Lammers\bin\Debug\System.Data.SQLite.xml
 M:\Onderhoudsprogramma\onderhoudsprogramma\Lammers\bin\Debug\System.Data.SQLite.dll.config
-M:\Onderhoudsprogramma\onderhoudsprogramma\Lammers\obj\Debug\Lammers.csprojResolveAssemblyReference.cache
 M:\Onderhoudsprogramma\onderhoudsprogramma\Lammers\obj\Debug\View\Algemeen\AddAlgemeenView.g.cs
 M:\Onderhoudsprogramma\onderhoudsprogramma\Lammers\obj\Debug\View\Algemeen\AlgemeenOverzichtView.g.cs
 M:\Onderhoudsprogramma\onderhoudsprogramma\Lammers\obj\Debug\View\Algemeen\EditAlgemeenView.g.cs
@@ -706,9 +705,10 @@ M:\Onderhoudsprogramma\onderhoudsprogramma\Lammers\obj\Debug\View\Verfpompen\Ver
 M:\Onderhoudsprogramma\onderhoudsprogramma\Lammers\obj\Debug\Lammers.g.resources
 M:\Onderhoudsprogramma\onderhoudsprogramma\Lammers\obj\Debug\Lammers.Properties.Resources.resources
 M:\Onderhoudsprogramma\onderhoudsprogramma\Lammers\obj\Debug\Lammers.csproj.GenerateResource.Cache
-M:\Onderhoudsprogramma\onderhoudsprogramma\Lammers\obj\Debug\Lammers.csproj.CoreCompileInputs.cache
 M:\Onderhoudsprogramma\onderhoudsprogramma\Lammers\obj\Debug\Lammers.TrustInfo.xml
 M:\Onderhoudsprogramma\onderhoudsprogramma\Lammers\obj\Debug\Lammers.exe.manifest
 M:\Onderhoudsprogramma\onderhoudsprogramma\Lammers\obj\Debug\Lammers.application
 M:\Onderhoudsprogramma\onderhoudsprogramma\Lammers\obj\Debug\Lammers.exe
 M:\Onderhoudsprogramma\onderhoudsprogramma\Lammers\obj\Debug\Lammers.pdb
+M:\Onderhoudsprogramma\onderhoudsprogramma\Lammers\obj\Debug\Lammers.csprojResolveAssemblyReference.cache
+M:\Onderhoudsprogramma\onderhoudsprogramma\Lammers\obj\Debug\Lammers.csproj.CoreCompileInputs.cache

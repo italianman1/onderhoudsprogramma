@@ -295,6 +295,7 @@ namespace Lammers.ViewModel.Opleggers
                                 oplegger.locatie = Locatie;
                                 oplegger.stamkaart = Certificaat;
                                 oplegger.status = SelectedStat;
+                                oplegger.datum_laatst_aangepast = DateTime.Now;
                             }
                         }
                       

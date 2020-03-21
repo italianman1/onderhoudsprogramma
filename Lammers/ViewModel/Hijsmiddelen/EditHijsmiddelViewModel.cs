@@ -288,6 +288,7 @@ namespace Lammers.ViewModel.Hijsmiddelen
                                 hijsmiddel.datum_herkeuring = Herkeuringsdatum;
                                 hijsmiddel.certificaat = Certificaat;
                                 hijsmiddel.stevens = Stevens;
+                                hijsmiddel.datum_laatst_aangepast = DateTime.Now;
                                 break;
                             }
                         }

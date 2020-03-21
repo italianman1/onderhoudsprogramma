@@ -28,7 +28,8 @@
                 <DataGridTextColumn Header="Certificaat nr" Binding="{Binding certi_nr}" Width="*"   />
                 <DataGridTextColumn Header="Registratie nr" Binding="{Binding reg_nr}" Width="*"   />
                 <DataGridTextColumn Header="Certificaat link" Binding="{Binding certificaat}" Width="*"   />
-                <DataGridTextColumn Header="Status" Binding="{Binding status}" Width="350"   />
+                <DataGridTextColumn Header="Status" Binding="{Binding status}" Width="*"   />
+                <DataGridTextColumn Header="Datum laatst aangepast" Binding="{Binding datum_laatst_aangepast}" Width="350"   />
 
             </DataGrid.Columns>
 

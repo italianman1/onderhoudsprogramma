@@ -200,7 +200,8 @@ namespace Lammers.ViewModel.Algemeen
                             leverancier = Leverancier,
                             datum_gekeurd = Keuringdatum,
                             datum_herkeuring = Herkeuringsdatum,
-                            stamkaart = Certificaat
+                            stamkaart = Certificaat,
+                            datum_laatst_aangepast = DateTime.Now                          
                         };
 
                         context.AlgemeenItem.Add(newAlgemeenitem);

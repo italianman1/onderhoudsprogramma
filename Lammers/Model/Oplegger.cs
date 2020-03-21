@@ -25,5 +25,6 @@ namespace Lammers.Model
         public string stamkaart { get; set; }
         public string benaming { get; set; }
         public string status { get; set; }
+        public Nullable<System.DateTime> datum_laatst_aangepast { get; set; }
     }
 }

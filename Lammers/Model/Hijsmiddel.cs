@@ -23,5 +23,6 @@ namespace Lammers.Model
         public string status { get; set; }
         public string certificaat { get; set; }
         public Nullable<bool> stevens { get; set; }
+        public Nullable<System.DateTime> datum_laatst_aangepast { get; set; }
     }
 }

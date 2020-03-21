@@ -259,6 +259,7 @@ namespace Lammers.ViewModel.Hefmiddelen
                                 Hefmiddel.datum_herkeuring = Herkeuringsdatum;
                                 Hefmiddel.merk = Merk;
                                 Hefmiddel.stamkaart = Certificaat;
+                                Hefmiddel.datum_laatst_aangepast = DateTime.Now;
                             }
                         }
 

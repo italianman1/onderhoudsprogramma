@@ -277,7 +277,8 @@ namespace Lammers.ViewModel.Hijsmiddelen
                             datum_gekeurd = Keuringdatum,
                             datum_herkeuring = Herkeuringsdatum,
                             certificaat = Certificaat,
-                            stevens = Stevens
+                            stevens = Stevens,
+                            datum_laatst_aangepast = DateTime.Now
                         };
 
                         context.Hijsmiddel.Add(newHijsmiddel);

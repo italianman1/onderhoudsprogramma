@@ -26,5 +26,6 @@ namespace Lammers.Model
         public Nullable<int> bouwjaar { get; set; }
         public string stamkaart { get; set; }
         public Nullable<bool> stevens { get; set; }
+        public Nullable<System.DateTime> datum_laatst_aangepast { get; set; }
     }
 }

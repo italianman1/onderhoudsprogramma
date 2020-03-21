@@ -4,18 +4,18 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="24ffc28b407a4fcb85c9c0552d330c1e" Name="Diagram1">
+      <Diagram DiagramId="d7c0cad379e24488b630da82b434958a" Name="Diagram1">
         <EntityTypeShape EntityType="Onderhoud_calibratieModel.AlgemeenItem" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Onderhoud_calibratieModel.Bovenloopkraan" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Onderhoud_calibratieModel.Compressor" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Onderhoud_calibratieModel.Hefmiddel" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Onderhoud_calibratieModel.Hijsmiddel" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Onderhoud_calibratieModel.Ladder" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Onderhoud_calibratieModel.Lasapparaat" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Onderhoud_calibratieModel.Meetmiddel" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Onderhoud_calibratieModel.Oplegger" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Onderhoud_calibratieModel.Valbeveiliging" Width="1.5" PointX="8.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Onderhoud_calibratieModel.Verfpomp" Width="1.5" PointX="8.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Onderhoud_calibratieModel.Hefmiddel" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Onderhoud_calibratieModel.Hijsmiddel" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Onderhoud_calibratieModel.Ladder" Width="1.5" PointX="4.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Onderhoud_calibratieModel.Lasapparaat" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Onderhoud_calibratieModel.Meetmiddel" Width="1.5" PointX="6.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Onderhoud_calibratieModel.Oplegger" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Onderhoud_calibratieModel.Valbeveiliging" Width="1.5" PointX="8.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Onderhoud_calibratieModel.Verfpomp" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
